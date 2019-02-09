@@ -1,0 +1,271 @@
+2019-01-26 12:42:34	action.php 1 POSTS: login_email = test@mail.ru	login_password = dsds	action = login	 line:151 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 10:42:34	action.php POSTS: login_email = test@mail.ru	login_password = dsds	action = login	 line:151 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 10:42:34	trying to login test@mail.ru line:151 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 10:42:34	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'test@mail.ru' LIMIT 1 line:151 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 10:42:34	{"errorMsg":"Unknown email."} line:151 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 12:44:14	action.php 1 POSTS: reg_user_type = 1	reg_email = admin@poczta.com	reg_password = 123	action = register	 line:151 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 10:44:14	action.php POSTS: reg_user_type = 1	reg_email = admin@poczta.com	reg_password = 123	action = register	 line:151 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 10:44:14	trying to register admin@poczta.com line:151 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 10:44:14	{"result":"OK"} line:151 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 12:45:22	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:151 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 10:45:22	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:151 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 10:45:22	trying to login admin@poczta.com line:151 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 10:45:22	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:151 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 10:45:22	{"role":"3"} line:151 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 19:01:01	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 17:01:01	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 17:01:01	trying to login admin@poczta.com line:148 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 17:01:01	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 17:01:01	{"errorMsg":"DB error. Please contact to admin"} line:148 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 19:02:17	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 17:02:17	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 17:02:17	trying to login admin@poczta.com line:148 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 17:02:17	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\OSPanel\domains\test2412.com\action.php
+2019-01-26 17:02:17	{"role":"3"} line:148 D:\OSPanel\domains\test2412.com\action.php
+2019-01-30 14:27:01	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 12:27:01	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 12:27:01	trying to login admin@poczta.com line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 12:27:01	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 12:27:01	{"role":"3"} line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 18:01:54	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 16:01:54	action.php POSTS: action = logout	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 16:01:54	logout! line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 18:02:02	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 16:02:02	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 16:02:02	trying to login admin@poczta.com line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 16:02:02	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 16:02:02	{"role":"3"} line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 18:02:27	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 16:02:27	action.php POSTS: action = logout	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 16:02:27	logout! line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 18:02:32	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 16:02:32	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 16:02:32	trying to login admin@poczta.com line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 16:02:32	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-30 16:02:33	{"role":"3"} line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 13:12:09	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 11:12:09	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 11:12:09	trying to login admin@poczta.com line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 11:12:10	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 11:12:10	{"role":"3"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:14:51	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:14:51	action.php POSTS: action = logout	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:14:51	logout! line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:14:59	action.php 1 POSTS: login_email = igor@poczta.com	login_password = 12345	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:14:59	action.php POSTS: login_email = igor@poczta.com	login_password = 12345	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:14:59	trying to login igor@poczta.com line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:14:59	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'igor@poczta.com' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:14:59	{"role":"1"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:15:36	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:15:37	action.php POSTS: action = logout	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:15:37	logout! line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:15:44	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:15:44	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:15:44	trying to login admin@poczta.com line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:15:44	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:15:44	{"role":"3"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:17:22	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:17:22	action.php POSTS: action = logout	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:17:22	logout! line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:17:29	action.php 1 POSTS: login_email = igor@poczta.com	login_password = 12345	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:17:29	action.php POSTS: login_email = igor@poczta.com	login_password = 12345	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:17:29	trying to login igor@poczta.com line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:17:29	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'igor@poczta.com' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:17:29	{"errorMsg":"User is blocked."} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:17:48	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:17:49	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:17:49	trying to login admin@poczta.com line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:17:49	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 16:17:49	{"role":"3"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 19:15:56	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 17:15:56	action.php POSTS: action = logout	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 17:15:56	logout! line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 19:15:59	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 1234	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 17:15:59	action.php POSTS: login_email = admin@poczta.com	login_password = 1234	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 17:15:59	trying to login admin@poczta.com line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 17:15:59	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 17:15:59	{"role":"3"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 19:28:31	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 17:28:31	action.php POSTS: action = logout	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 17:28:31	logout! line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 19:28:47	action.php 1 POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 17:28:48	action.php POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 17:28:48	trying to login i.andrievsky@mail.ru line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 17:28:48	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'i.andrievsky@mail.ru' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 17:28:48	{"role":"1"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 20:35:51	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:35:51	action.php POSTS: action = logout	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:35:51	logout! line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 20:36:00	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:36:00	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:36:00	trying to login admin@poczta.com line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:36:00	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:36:01	{"role":"3"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 20:52:00	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:52:00	action.php POSTS: action = logout	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:52:00	logout! line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 20:52:08	action.php 1 POSTS: login_email = igor@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:52:08	action.php POSTS: login_email = igor@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:52:08	trying to login igor@poczta.com line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:52:08	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'igor@poczta.com' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 18:52:08	{"role":"1"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 21:13:24	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 19:13:24	action.php POSTS: action = logout	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-01-31 19:13:24	logout! line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-01 19:38:18	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-01 17:38:18	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-01 17:38:18	trying to login admin@poczta.com line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-01 17:38:18	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-01 17:38:18	{"role":"3"} line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-02 17:56:01	action.php 1 POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-02 15:56:01	action.php POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-02 15:56:01	trying to login i.andrievsky@mail.ru line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-02 15:56:01	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'i.andrievsky@mail.ru' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-02 15:56:01	{"role":"1"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-02 18:03:55	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-02 16:03:55	action.php POSTS: action = logout	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-02 16:03:55	logout! line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-02 18:04:00	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-02 16:04:00	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-02 16:04:01	trying to login admin@poczta.com line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-02 16:04:01	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-02 16:04:01	{"role":"3"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 19:19:31	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:19:31	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:19:31	trying to login admin@poczta.com line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:19:31	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:19:31	{"role":"3"} line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 19:21:56	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:21:56	action.php POSTS: action = logout	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:21:56	logout! line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 19:22:02	action.php 1 POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:22:02	action.php POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:22:02	trying to login i.andrievsky@mail.ru line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:22:02	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'i.andrievsky@mail.ru' LIMIT 1 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:22:02	{"errorMsg":"Wrong password."} line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 19:22:17	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:22:17	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:22:17	trying to login admin@poczta.com line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:22:17	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:22:17	{"role":"3"} line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 19:22:27	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:22:27	action.php POSTS: action = logout	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:22:27	logout! line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 19:22:33	action.php 1 POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:22:33	action.php POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:22:33	trying to login i.andrievsky@mail.ru line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:22:33	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'i.andrievsky@mail.ru' LIMIT 1 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 17:22:33	{"role":"1"} line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 20:35:24	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 18:35:24	action.php POSTS: action = logout	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 18:35:24	logout! line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 20:40:29	action.php 1 POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 18:40:30	action.php POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 18:40:30	trying to login i.andrievsky@mail.ru line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 18:40:30	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'i.andrievsky@mail.ru' LIMIT 1 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-03 18:40:30	{"role":"1"} line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 14:42:28	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 12:42:28	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 12:42:28	trying to login admin@poczta.com line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 12:42:28	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 12:42:29	{"role":"3"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 14:42:47	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 12:42:47	action.php POSTS: action = logout	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 12:42:47	logout! line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 14:42:56	action.php 1 POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 12:42:56	action.php POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 12:42:56	trying to login i.andrievsky@mail.ru line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 12:42:56	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'i.andrievsky@mail.ru' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 12:42:57	{"role":"1"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 14:44:12	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 12:44:12	action.php POSTS: action = logout	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 12:44:12	logout! line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 14:44:19	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 12:44:19	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 12:44:19	trying to login admin@poczta.com line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 12:44:19	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-04 12:44:19	{"role":"3"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 11:11:57	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 09:11:57	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 09:11:57	trying to login admin@poczta.com line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 09:11:57	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 09:11:57	{"role":"3"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 16:01:51	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 14:01:51	action.php POSTS: action = logout	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 14:01:51	logout! line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 16:02:02	action.php 1 POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 14:02:02	action.php POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 14:02:02	trying to login i.andrievsky@mail.ru line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 14:02:02	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'i.andrievsky@mail.ru' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 14:02:02	{"role":"1"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 18:30:37	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 16:30:37	action.php POSTS: action = logout	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 16:30:37	logout! line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 18:30:43	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 16:30:43	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 16:30:43	trying to login admin@poczta.com line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 16:30:43	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 16:30:43	{"role":"3"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 18:33:12	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 16:33:12	action.php POSTS: action = logout	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 16:33:12	logout! line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 18:33:18	action.php 1 POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 16:33:18	action.php POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 16:33:18	trying to login i.andrievsky@mail.ru line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 16:33:18	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'i.andrievsky@mail.ru' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-05 16:33:18	{"role":"1"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 14:23:18	action.php 1 POSTS: login_email = igor@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:23:18	action.php POSTS: login_email = igor@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:23:18	trying to login igor@poczta.com line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:23:18	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'igor@poczta.com' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:23:18	{"errorMsg":"Wrong password."} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 14:23:24	action.php 1 POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:23:24	action.php POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:23:24	trying to login i.andrievsky@mail.ru line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:23:24	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'i.andrievsky@mail.ru' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:23:24	{"role":"1"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 14:50:45	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:50:45	action.php POSTS: action = logout	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:50:45	logout! line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 14:50:50	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:50:50	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:50:50	trying to login admin@poczta.com line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:50:50	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:50:51	{"role":"3"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 14:54:40	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:54:40	action.php POSTS: action = logout	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:54:40	logout! line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 14:54:47	action.php 1 POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:54:47	action.php POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:16 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:54:47	trying to login i.andrievsky@mail.ru line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:54:47	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'i.andrievsky@mail.ru' LIMIT 1 line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 12:54:47	{"role":"1"} line:148 D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 21:53:48	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 19:53:48	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 19:53:48	trying to login admin@poczta.com line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 19:53:48	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 19:53:48	{"role":"3"} line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 21:57:07	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 19:57:07	action.php POSTS: action = logout	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 19:57:07	logout! line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 21:57:13	action.php 1 POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 19:57:13	action.php POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 19:57:14	trying to login i.andrievsky@mail.ru line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 19:57:14	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'i.andrievsky@mail.ru' LIMIT 1 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 19:57:14	{"role":"1"} line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 22:01:55	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 20:01:55	action.php POSTS: action = logout	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-06 20:01:55	logout! line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-08 20:33:21	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-08 18:33:21	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-08 18:33:21	trying to login admin@poczta.com line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-08 18:33:21	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-08 18:33:21	{"role":"3"} line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-08 22:02:50	action.php 1 POSTS: action = logout	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-08 20:02:50	action.php POSTS: action = logout	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-08 20:02:50	logout! line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-08 22:02:55	action.php 1 POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-08 20:02:55	action.php POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:16 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-08 20:02:55	trying to login i.andrievsky@mail.ru line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-08 20:02:55	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'i.andrievsky@mail.ru' LIMIT 1 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-08 20:02:55	{"role":"1"} line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php

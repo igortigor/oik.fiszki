@@ -1,0 +1,55 @@
+KPQPg9YHq8sVwSmZ
+
+CREATE TABLE IF NOT EXISTS `tb_list_tytuly` (
+  `id` int(1) unsigned NOT NULL AUTO_INCREMENT,
+  `group` varchar(50) NOT NULL DEFAULT '',
+  `tytulname` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `tb_psy` (
+  `id` int(1) unsigned NOT NULL AUTO_INCREMENT,
+  `owner_id` int(1) unsigned NOT NULL DEFAULT '0',
+  `rodowod` varchar(100) NOT NULL DEFAULT '',
+  `rodowod_preparing` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `tytuly` varchar(500) NOT NULL DEFAULT '',
+  `nazwa_przydomek` varchar(150) NOT NULL DEFAULT '',
+  `rasa_id` int(1) unsigned NOT NULL DEFAULT '0',
+  `color_id` int(1) unsigned NOT NULL DEFAULT '0',
+  `birthday` date NOT NULL DEFAULT '0000-00-00',
+  `sex` SET('P', 'S'),
+  `chip_nr` varchar(100) NOT NULL DEFAULT '',
+  `tata_name` varchar(100) NOT NULL DEFAULT '',
+  `mama_name` varchar(100) NOT NULL DEFAULT '',
+  `hodowca` varchar(100) NOT NULL DEFAULT '',
+  `coowner` varchar(100) NOT NULL DEFAULT '',
+  `reg_datetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `is_confirmed` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE IF NOT EXISTS `tb_main` (
+  `id` bigint(1) unsigned NOT NULL AUTO_INCREMENT,
+  `phone` varchar(13) NOT NULL DEFAULT '',
+  `message` varchar(250) NOT NULL DEFAULT '',
+  `answer` varchar(250) NOT NULL DEFAULT '',
+  `datetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `state_id` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `sms_id` varchar(40) NOT NULL DEFAULT '0',
+  `gate_id` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `code_type_id` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `pay_result` varchar(250) NOT NULL DEFAULT '',
+  `pay_http_code` int(1) unsigned NOT NULL DEFAULT '0',
+  `pay_datetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+
+TODO
+
+1. lista kolory в сетах не фильтровать по расе.
+2. при открытии пса, запретить редактирование (ридонли) и добавить кнопку редактировать (может быть на каждом поле тыкать и при обновлении обновлять в базе по одному полю?) оставим на потом
+
+3. 

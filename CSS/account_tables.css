@@ -1,0 +1,64 @@
+.standartTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.standartTable td, .standartTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.standartTable tr:nth-child(even){background-color: #f2f2f2;}
+
+.standartTable tr:hover {background-color: #ddd;}
+
+.standartTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  //background-color: #4CAF50;
+  background-color: #2196F3;
+  color: white;
+}
+
+.accountInfo {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+
+}
+
+.accountInfo td, .accountInfo th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.accountInfo th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: Right;
+//background-color: #4CAF50;
+  //background-color: #2196F3;
+  background: #e9e9e9;
+  //color: white;
+}
+.accountInfo tr:nth-child(even){background-color: #f2f2f2;}
+
+.accountInfo td:hover {background-color: #ddd;}
+
+.accountInfo td.td_0{background-color: green;}
+
+.accountInfo td.td_1{background-color: red;}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}

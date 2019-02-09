@@ -1,0 +1,26 @@
+Вам нужно удалить атрибут data-dismiss="modal" в элементе .sendToUser.
+Если вам нужно закрыть modal, вам просто нужно добавить код:
+$('#userSelectionModal').modal('hide')
+
+
+emailField.addEventListener('keyup', function (event) {
+  isValidEmail = emailField.checkValidity();
+  
+  if ( isValidEmail ) {
+    okButton.disabled = false;
+  } else {
+    okButton.disabled = true;
+  }
+});
+
+
+var isValid = true;
+$('input').filter('[required]:visible').each(function() {
+	//$('input,textarea,select').filter('[required]:visible').each(function() {
+
+	console.log("input val = " + $(this).val());
+	/*
+	if ( $(this).val() === '' )
+		isValid = false;
+	*/
+});

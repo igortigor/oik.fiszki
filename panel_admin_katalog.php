@@ -112,24 +112,17 @@ if($_GET['sel'] == "rasy"){
     .button1 {font-size: 10px;}
 </style>
     <?php
-/*D:\GOOGLEDRIVE\SERVER\OSDomains\oik.fiszki.loc\JS\admin_katalog_test.js
-    <script>
-        $(document).ready(function() {
-            $('#example').DataTable();
-        } );
-    </script>
-*/
 
     $sql = "SELECT `id`, `name`, `grupa` FROM `tb_list_rasy` ORDER BY `id`";//<i class="fa fa-pencil-square" aria-hidden="true"></i>
     if($result = $mysqli->query($sql)) {
         if($result->num_rows > 0){
 //display
 //cell-border compact stripe
-            echo ("<div style='max-width: 800px; margin: 20px;'><table id=\"rasyTable\" class=\"cell-border compact stripe\"><thead><tr><th>Nazwa</th><th>Grupa</th><th></th></tr></thead><tbody>");
+            echo ("<div style='max-width: 800px; margin: 20px;'><table id=\"rasyTable\" class=\"cell-border compact stripe\"><thead><tr><th>Nazwa</th><th>Grupa</th><th>ID</th></tr></thead><tbody>");
 
             while ($row = $result->fetch_object()) {
                 if($row->grupa == 0){$grupa = "Rasy nieuznane przez FCI";}else{$grupa = "Grupa ".$row->grupa;}
-                echo ("<tr onclick='setIdToHref($row->id);'><td>$row->name</td><td>$grupa</td><td></td></tr>");
+                echo ("<tr onclick='setIdToHref($row->id);'><td>$row->name</td><td>$grupa</td><td>$row->id</td></tr>");
             }
 
             echo ("</tbody>
@@ -137,7 +130,7 @@ if($_GET['sel'] == "rasy"){
                                     <a id='hrefToEdit' href='#&edit_id=0'><img src='img/writing.png' title='Edytuj wybraną rasę'></img></a>
                                     <a href='?action=katalog&sel=rasy&add=1'><img src='img/add.png' title='Dodaj rasę'></img></a>
                                </th>
-                    <th>Grupa</th><th><input type='submit' value='Dodaj'></th></tr></tfoot>
+                    <th>Grupa</th><th></th></tr></tfoot>
                     </table></div>");
         }else{fn_show_report("Nie ma danych");}
     }else{fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
@@ -210,18 +203,18 @@ if($_GET['sel'] == "colors"){
 
             echo ("<div style='max-width: 800px; margin: 20px;'>
                 <table id=\"colorsTable\" class=\"cell-border compact stripe\">
-                <thead><tr><th>Nazwa umaszczenia</th></tr></thead>
+                <thead><tr><th>Nazwa umaszczenia</th><th>ID</th></tr></thead>
                 <tbody>");
 
             while ($row = $result->fetch_object()) {
-                echo ("<tr onclick='setIdToHref($row->id);'><td>$row->name</td></tr>");
+                echo ("<tr onclick='setIdToHref($row->id);'><td>$row->name</td><td>$row->id</td></tr>");
             }
 
             echo ("</tbody>
                     <tfoot><tr><th align='left'>
                                     <a id='hrefToEdit' href='#&edit_id=0'><img src='img/writing.png' title='Edytuj wybrane umaszczenie'></img></a>
                                     <a href='?action=katalog&sel=colors&add=1'><img src='img/add.png' title='Dodaj nowe umaszczenie'></img></a>
-                               </th>
+                               </th><th></th>
                     </tr></tfoot>
                     </table></div>");
         }else{fn_show_report("Nie ma danych");}

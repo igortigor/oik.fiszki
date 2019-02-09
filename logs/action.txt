@@ -269,3 +269,16 @@
 2019-02-08 20:02:55	trying to login i.andrievsky@mail.ru line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
 2019-02-08 20:02:55	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'i.andrievsky@mail.ru' LIMIT 1 line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
 2019-02-08 20:02:55	{"role":"1"} line:148 D:\GOOGLE_DRIVE\SERVER\OSDomains\oik.fiszki.loc\action.php
+2019-02-09 13:07:13	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-09 11:07:13	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-09 11:07:13	trying to login admin@poczta.com line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-09 11:07:13	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-09 11:07:14	{"role":"3"} line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-09 16:25:33	action.php 1 POSTS: action = logout	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-09 14:25:33	action.php POSTS: action = logout	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-09 14:25:33	logout! line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-09 16:25:38	action.php 1 POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-09 14:25:38	action.php POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-09 14:25:39	trying to login i.andrievsky@mail.ru line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-09 14:25:39	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'i.andrievsky@mail.ru' LIMIT 1 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-09 14:25:39	{"role":"1"} line:148 D:\OSPanel\domains\oik.fiszki.git\action.php

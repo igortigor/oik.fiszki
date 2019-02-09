@@ -34,6 +34,7 @@ if($_SESSION["role"] == 3) {//admin
     $arr_menu['waiting'] = array("act_class" => "", "post_name" => "waiting", "menu_name" => "Oczekujące organizatory ".fn_waiting_orgs_cnt_span());
     //$arr_menu['katalog'] = array("act_class" => "", "post_name" => "katalog", "menu_name" => "Katalog");
     $arr_menu['katalog'] = array("act_class" => "", "post_name" => "katalog", "sub_menu_name" => "Katalog :", "sub_menu_arr" => array("Rasy" => "action=katalog&sel=rasy", "Umaszczenia" => "action=katalog&sel=colors", "Sety" => "action=katalog&sel=sety"));
+    $arr_menu['dogs'] = array("act_class" => "", "post_name" => "dogs", "menu_name" => "Psy");
 
 }elseif($_SESSION["role"] == 2){//organizer
     $main_php_file = "panel_organizer.php";
@@ -80,7 +81,8 @@ if(isset($arr_menu[$_GET['action']])){
     		if(empty($arr_value['act_class'])){$class_add = "";}else{$class_add = " active";}
     		
     		//echo ("<div class=\"subnav\"><button class=\"subnavbtn".$class_add."\">".$arr_value['sub_menu_name']."</button><div class=\"subnav-content\">");
-            echo ("<div class=\"dropdown\"><button class=\"dropbtn".$class_add."\">".$arr_value['sub_menu_name']."</button><div class=\"dropdown-content\">");
+            echo ("<div class=\"dropdown\"><button class=\"dropbtn".$class_add."\">".$arr_value['sub_menu_name']."</button>
+                    <div class=\"dropdown-content\">");
 
     		foreach ($arr_value['sub_menu_arr'] as $name => $href)
     		{

@@ -22,7 +22,12 @@ if($_GET['action'] == "showUserInfo"){
 
 //KATALOG
 if($_GET['action'] == "katalog"){
-    include("panel_admin_katalog.php");
+    include_once("panel_admin_katalog.php");
+}
+
+//PSY
+if($_GET['action'] == "dogs"){
+    include_once("panel_admin_dogs.php");
 }
 
 //accounts list

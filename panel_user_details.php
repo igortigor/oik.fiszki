@@ -7,10 +7,11 @@ if(isset($_POST['update_user_info']) AND isset($_POST['user_id']) AND is_numeric
     if(isset($_POST['surname'])){$surname = trim(addslashes(stripslashes($_POST['surname'])));}else{$surname="";}
     if(isset($_POST['phone'])){$phone = trim(addslashes(stripslashes($_POST['phone'])));}else{$phone="";}
     if(isset($_POST['adres'])){$adres = trim(addslashes(stripslashes($_POST['adres'])));}else{$adres="";}
+    if(isset($_POST['www'])){$www = trim(addslashes(stripslashes($_POST['www'])));}else{$www="";}
 
     $user_id = $_POST['user_id'];
 
-    $sql = "UPDATE `tb_users` SET `name` = '$name', `surname` = '$surname', `phone` = '$phone', `adres` = '$adres' WHERE `id` = '$user_id' LIMIT 1";
+    $sql = "UPDATE `tb_users` SET `name` = '$name', `surname` = '$surname', `phone` = '$phone', `adres` = '$adres', `www` = '$www' WHERE `id` = '$user_id' LIMIT 1";
 
     if(!$mysqli->query($sql)){
         fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);
@@ -49,6 +50,9 @@ if($result = $mysqli->query($sql))
         </td></tr>
         <tr><th>Adres:</th><td>
             <input id='infoAdres' type='text' name='adres' value='$row->adres' readonly size='50'>
+        </td></tr>
+        <tr><th>WWW:</th><td>
+            <input id='infoWeb' type='text' name='www' value='$row->www' readonly size='50'>
         </td></tr>
         <tr><th>Rejestracja:</th><td>
             <input type='text' name='reg_datetime' value='$row->reg_datetime' readonly size='50'>

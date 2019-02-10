@@ -46,6 +46,38 @@ CREATE TABLE IF NOT EXISTS `tb_main` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
+CREATE TABLE IF NOT EXISTS `tb_wystawy` (
+  `id` int(1) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `city_id` int(1) unsigned NOT NULL DEFAULT '0',
+  `show_date` date NOT NULL DEFAULT '0000-00-00',
+  `enter_to_date` date NOT NULL DEFAULT '0000-00-00',
+  `cancel_to_date` date NOT NULL DEFAULT '0000-00-00',
+  `change_class_to_date` date NOT NULL DEFAULT '0000-00-00',
+  `org_id` int(1) unsigned NOT NULL DEFAULT '0',
+  `ogr_info` varchar(300) NOT NULL DEFAULT '',
+  `remarks` varchar(300) NOT NULL DEFAULT '',
+  `rank_id` int(1) unsigned NOT NULL DEFAULT '0',
+  `adres` varchar(300) NOT NULL DEFAULT '',
+  `add_datetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `arc_datetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `is_public` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `tb_wystawy_pricing` (
+  `id` int(1) unsigned NOT NULL AUTO_INCREMENT,
+  `klasa_id` int(1) unsigned NOT NULL DEFAULT '0',
+  `price` int(1) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `tb_wystawy_uczestnicy` (
+  `show_id` int(1) unsigned NOT NULL DEFAULT '0',
+  `dog_id` int(1) unsigned NOT NULL DEFAULT '0',
+  `klasa_id` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `is_payed` tinyint(1) unsigned NOT NULL DEFAULT '0'
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
 TODO
 

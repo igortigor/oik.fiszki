@@ -33,11 +33,13 @@ if($_SESSION["role"] == 3) {//admin
     $arr_menu['admins'] = array("act_class" => "", "post_name" => "admins", "menu_name" => "Administratory");
     $arr_menu['waiting'] = array("act_class" => "", "post_name" => "waiting", "menu_name" => "Oczekujące organizatory ".fn_waiting_orgs_cnt_span());
     //$arr_menu['katalog'] = array("act_class" => "", "post_name" => "katalog", "menu_name" => "Katalog");
-    $arr_menu['katalog'] = array("act_class" => "", "post_name" => "katalog", "sub_menu_name" => "Katalog :", "sub_menu_arr" => array("Rasy" => "action=katalog&sel=rasy", "Umaszczenia" => "action=katalog&sel=colors", "Sety" => "action=katalog&sel=sety"));
+    $arr_menu['katalog'] = array("act_class" => "", "post_name" => "katalog", "sub_menu_name" => "Katalog :", "sub_menu_arr" => array("Rasy" => "action=katalog&sel=rasy", "Umaszczenia" => "action=katalog&sel=colors", "Miasta" => "action=katalog&sel=cities", "Sety" => "action=katalog&sel=sety"));
     $arr_menu['dogs'] = array("act_class" => "", "post_name" => "dogs", "menu_name" => "Psy");
 
 }elseif($_SESSION["role"] == 2){//organizer
     $main_php_file = "panel_organizer.php";
+    
+    $arr_menu['wystawy'] = array("act_class" => "", "post_name" => "wystawy", "menu_name" => "Wystawy");
 
 }else{//role=1 - user
     $main_php_file = "panel_user.php";
@@ -202,7 +204,7 @@ function fn_get_user_details()
             if($result->num_rows == 1){
                 return $result->fetch_assoc();
             }
-        }
+        }else{fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
     }
     return false;
 }
@@ -216,11 +218,24 @@ function fn_get_user_details_from_id($user_id)
             if($result->num_rows == 1){
                 return $result->fetch_assoc();
             }
-        }
+        }else{fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
     }
     return false;
 }
 
+function fn_get_row_with_id($tablename, $id)
+{
+    global $mysqli;
+    if(is_numeric($id)){
+        $sql = "SELECT * FROM `".trim(addslashes(stripslashes($tablename)))."` WHERE `id` = '$id' LIMIT 1";
+        if($result = $mysqli->query($sql)){
+            if($result->num_rows == 1){
+                return $result->fetch_assoc();
+            }
+        }else{fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
+    }
+    return false;
+}
 
 function fn_get_color_from_id($color_id)
 {
@@ -231,7 +246,7 @@ function fn_get_color_from_id($color_id)
         if($result->num_rows == 1){
             return $result->fetch_object()->name;
         }
-    }
+    }else{fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
 
     return "";
 }
@@ -245,7 +260,21 @@ function fn_get_rasa_from_id($rasa_id)
         if($result->num_rows == 1){
             return $result->fetch_object()->name;
         }
-    }
+    }else{fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
+
+    return "";
+}
+
+function fn_get_city_from_id($city_id)
+{
+    global $mysqli;
+
+    $sql = "SELECT `name` FROM `tb_list_miasta` WHERE `id` = '$city_id' LIMIT 1";
+    if($result = $mysqli->query($sql)){
+        if($result->num_rows == 1){
+            return $result->fetch_object()->name;
+        }
+    }else{fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
 
     return "";
 }
@@ -259,8 +288,28 @@ function fn_get_dog_details($dog_id)
         if($result->num_rows == 1){
             return $result->fetch_assoc();
         }
-    }
+    }else{fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
 
     return false;
 }
+
+fn_get_city_name
+
+
+/*
+function fn_get_wystawy_details($show_id, $org_id)
+{
+	global $mysqli;
+    if(is_numeric($id) AND is_numeric($org_id)){
+        $sql = "SELECT * FROM `tb_wystawy` WHERE `id` = '$id' AND `org_id` = '$org_id' LIMIT 1";
+        echo $sql;
+        if($result = $mysqli->query($sql)){
+            if($result->num_rows == 1){
+                return $result->fetch_assoc();
+            }
+        }else{fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
+    }
+    return false;
+}
+*/
 ?>

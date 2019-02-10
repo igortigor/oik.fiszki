@@ -52,3 +52,7 @@ VALUES('2','','1','["2","6","8"]','Piesek','407',
 VALUES('2','SDGFSDGFS','0','','Nowy pies','117',
 '9','2019-02-04','S','sdfsdf','sdfsdf',
 'sdfsf','sdfsdf','sdfsfs','2019-02-06 16:42:23')-Duplicate entry '2-Nowy pies' for key 'owner_id' line: no_line file: 
+2019-02-10 13:16:08	mysql_error: (UPDATE `tb_users` SET `hash` = '$2y$10$d7BF2n3jvfV7LaJYlgpc6O5FUoKsnkLBpVN/6Plbhy6PBcjIPT/5y', `email_comfirmed` = 1 WHERE `id` = '1' LIMIT 1) line: 144 file: index.php
+2019-02-10 17:06:26	mysql_error: Duplicate entry '0-fdsafsdf-0000-00-00-1' for key 'city_id'(INSERT INTO `tb_wystawy` (`name`,`org_id`)VALUES('fdsafsdf', '1')) line: 167 file: panel_organizer_wystawy.php
+2019-02-10 17:13:22	mysql_error: Duplicate entry '0-rerar-0000-00-00-1' for key 'city_id'(INSERT INTO `tb_wystawy` (`name`,`org_id`)VALUES('rerar', '1')) line: 170 file: panel_organizer_wystawy.php
+2019-02-10 17:24:44	mysql_error: Duplicate entry '0-wetrwt-0000-00-00-1' for key 'city_id'(INSERT INTO `tb_wystawy` (`name`,`org_id`)VALUES('wetrwt', '1')) line: 172 file: panel_organizer_wystawy.php

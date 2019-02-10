@@ -22,6 +22,9 @@ function letEditInfo()
 
   document.getElementById("infoAdres").readOnly = false;
   document.getElementById("infoAdres").style.borderColor = "red";
+  
+  document.getElementById("infoWeb").readOnly = false;
+  document.getElementById("infoWeb").style.borderColor = "red";
 
   document.getElementById("infoSurame").readOnly = false;
   document.getElementById("infoSurame").style.borderColor = "red";
@@ -30,7 +33,17 @@ function letEditInfo()
   document.getElementById("infoPhone").style.borderColor = "red";
 
   document.getElementById('hidden_tr_submit').style.display = 'table-row';
+  
+  
+	 window.onkeyup = function (event) {
+	  if (event.keyCode == 27) {
+	    location.reload(); 
+	  }
+	 };
+ 
 }
+
+
 
 onerror=handleErr;
 function handleErr(myMsg,myUrl,myRow)
@@ -39,7 +52,15 @@ function handleErr(myMsg,myUrl,myRow)
   tmp+="Error: " + myMsg + "\n";
   tmp+="Url: " + myUrl + "\n";
   tmp+="Row: " + myRow + "\n";
-  $.post('/debug_js.php',{err:myMsg,url:myUrl,row:myRow});
+  //$.post('/debug_js.php',{err:myMsg,url:myUrl,row:myRow});
   alert(tmp);
   return true;
 }
+
+function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+   }

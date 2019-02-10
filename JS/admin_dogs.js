@@ -44,6 +44,42 @@ if(document.getElementById("dogsListTable")){
             .search( this.value )
             .draw();
     } );
+    
+    
+     $('#owner_id_col').on( 'keyup', function () {
+        table
+            .columns( 2 )
+            .search( this.value )
+            .draw();
+    } );
+    
+    $('#nazwa_col').on( 'keyup', function () {
+        table
+            .columns( 3 )
+            .search( this.value )
+            .draw();
+    } );
+    
+    $('#birthday_col').on( 'keyup', function () {
+        table
+            .columns( 4 )
+            .search( this.value )
+            .draw();
+    } );
+    
+    $('#chip_col').on( 'keyup', function () {
+        table
+            .columns( 5 )
+            .search( this.value )
+            .draw();
+    } );
+    
+    $('#hodowca_col').on( 'keyup', function () {
+        table
+            .columns( 6 )
+            .search( this.value )
+            .draw();
+    } );   
 
     $('#sex_sel').on( 'change', function () {
         table

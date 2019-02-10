@@ -221,6 +221,76 @@ if($_GET['sel'] == "colors"){
     }else{fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
 }
 
+//--------------------<CITIES-----------------------------------
+if($_GET['sel'] == "cities"){
+
+    if(isset($_POST['city_id']) AND isset($_POST['nazwaRasy']) AND isset($_POST['selectGrupa'])){
+       // fn_show_report( fn_update_rasa($_POST['rasa_id'],$_POST['nazwaRasy'], $_POST['selectGrupa']) );
+    }
+
+    if(isset($_POST['newRasaName']) AND isset($_POST['selectGrupa'])){
+        //fn_show_report( fn_insert_new_rasa($_POST['newRasaName'], $_POST['selectGrupa']) );
+    }
+
+    //---EDIT CITY FORM-----
+    if(isset($_GET['edit_id']) AND is_numeric($_GET['edit_id'])){
+
+        echo ("<div style='max-width: 800px; margin: 20px; display: inline-block;'>");
+
+        $sql = "SELECT `id`, `name`, `woj_id` FROM `tb_list_miasta` WHERE `id` = '".$_GET['edit_id']."' LIMIT 1";
+        if($result = $mysqli->query($sql)){
+            if($row = $result->fetch_object())
+            {
+                if(isset($sel[$row->grupa])){$sel[$row->grupa] = "selected";}
+                echo ("<table border=\"0\" class=\"standartTable\">
+                        <form action=\"?action=katalog&sel=cities\" method=\"POST\">
+			      	    <input type=\"hidden\" name=\"city_id\" value = \"$row->id\">
+                        <tr>
+		                <td><input type='text' name='nazwaRasy' value='$row->name' size='35'></td>
+		                <td>".fn_show_select_wojewodstwa ($woj_id)."</td>                                  
+		      <td><input type='submit' value='Save'></td></tr>
+		      </form>
+		      </table>");
+            }
+        }else{
+            fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);
+        }
+
+
+        echo ("</div>");
+        exit();
+    }
+    
+
+
+?>
+    <link rel="stylesheet" type="text/css" href="libs/DataTables/datatables.min.css"/>
+    <script type="text/javascript" src="libs/DataTables/datatables.min.js"></script>
+    <script type="text/javascript" src="JS/admin_katalog_cities.js"></script>
+
+<?php
+
+    $sql = "SELECT `M`.`id` AS `city_id`,`M`.`name` AS `city`,`W`.`name` AS `woj` FROM `tb_list_miasta` as `M` INNER JOIN `tb_list_wojewodstwa` AS `W` ON `M`.`woj_id` = `W`.`id` ORDER BY `M`.`name`";
+    if($result = $mysqli->query($sql)) {
+        if($result->num_rows > 0){
+
+            echo ("<div style='max-width: 800px; margin: 20px;'><table id=\"citiesTable\" class=\"cell-border compact stripe\"><thead><tr><th align='left' >ID</th>
+            <th align='left' ><input id=\"citySearch\" placeholder=\"MIASTO\" class=\"form-control\" /></th>
+            <th align='left' class='select-filter'>WOJEWODSTWO</th></tr></thead><tbody>");
+
+            while ($row = $result->fetch_object()) {
+                echo ("<tr><td>$row->city_id</td><td>$row->city</td><td>$row->woj</td></tr>");
+            }
+
+            echo ("</tbody>
+                    <tfoot><tr><th></th>
+                    <th></th><th align='left'></th></tr></tfoot>
+                    </table></div>");
+        }else{fn_show_report("Nie ma danych");}
+    }else{fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
+}
+//--------------------CITIES>-----------------------------------
+
 if($_GET['sel'] == "sety"){
 
 ?>
@@ -253,7 +323,7 @@ if(isset($_POST['rasa_id'])){
                         <input id='inputRasaID' type='hidden' name='rasa_id' size='35' value='$rasa_id_value'>
                         <input id='inputColorID' type='hidden' name='color_id' size='35' value=''>
                         <tr align='center'>
-                        <td><input id='submitLista' type='submit' value='LISTA' disabled></td>
+                        <td><input id='submitLista' type='submit' value='POKAŻ' disabled></td>
 		                
 		                <td><input id='inputRasa' onkeyup=\"activateButtons()\" type='text' name='rasa_name' style=\"width:100%\" value='$rasa_name_value' readonly></td>
 		                <td style=\"padding: 5px;\"><img src=\"/img/list.png\" onclick=\"window_rasy();\" disabled></td>
@@ -427,4 +497,19 @@ function fn_insert_new_color($newColorName)
     return "Zmiany nie udało się zachować.";
 }
 
+function fn_show_select_wojewodstwa ($woj_id)
+{
+	global $mysqli;
+	
+	$res = "<select name='selectWojedodstwo'>";
+	
+	$sql = "SELECT * FROM `tb_list_wojewodstwa` ORDER BY `id`";
+	if($result = $mysqli->query($sql)) {
+        while ($row = $result->fetch_object()) {
+        	if($woj_id == $row->id){$selected = "selected";}else{$selected = "";}
+        	$res .= "<option $selected value=\"$row->id\">$row->name</option>";
+        }
+    }
+    $res = "</select>";
+}
 ?>

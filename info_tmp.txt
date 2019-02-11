@@ -79,6 +79,37 @@ CREATE TABLE IF NOT EXISTS `tb_wystawy_uczestnicy` (
   `is_payed` tinyint(1) unsigned NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
+CREATE TABLE IF NOT EXISTS `tb_list_klasy` (
+  `id` int(1) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+INSERT INTO `tb_list_klasy` (`name`)VALUES
+('Klasa mlodych szczeniat'),
+('Klasa szczeniat'),
+('Klasa posriednia'),
+('Klasa otwarta'),
+('Klasa uzytkowa'),
+('Klasa czampionow'),
+('Klasa weteranow'),
+('Drugi pies taniej o kwote');
+
+CREATE TABLE IF NOT EXISTS `tb_list_rangi` (
+  `id` int(1) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+INSERT INTO `tb_list_rangi` (`name`)VALUES
+('krajowa'),
+('miedzynarodowa'),
+('specjalistyczna'),
+('klubowa'),
+('championow');
+
+
 TODO
 
 1. lista kolory в сетах не фильтровать по расе.

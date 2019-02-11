@@ -293,7 +293,10 @@ function fn_get_dog_details($dog_id)
     return false;
 }
 
-fn_get_city_name
+function isValidDate($date, $format= 'Y-m-d'){
+	if($date == "0000-00-00"){return true;}
+    return $date == date($format, strtotime($date));
+}
 
 
 /*

@@ -58,3 +58,22 @@ function setRasaValue(rasaId,rasaName)
     document.getElementById('inputRasa').value=rasaName;
     document.getElementById("submitLista").disabled = false;
 }
+
+function window_cities()
+{
+	if(document.getElementById('flagaFormActive').value == 0){return;}
+	if(okno && okno.open && !okno.closed)okno.close();
+    okno = window.open('list_cities.php?show=1','Miasta','width=940,height=600,scrollbars=1');
+    if(!okno || okno.height === 0 || !okno.top){window.alert('Otwarcie dodatkowego okienka nie jest możliwe. Proszę sprawdzić ustawienia przeglądarki.');return;}
+    okno.focus();
+}
+
+function setCityValue(cityId,cityName)
+{
+    document.getElementById('showCityID').value=cityId;
+    //document.getElementById('showCity').value=cityName;
+    document.getElementById('showCityTD').innerHTML = cityName;
+
+    //document.getElementById("submitLista").disabled = false;
+    okno.close();
+}

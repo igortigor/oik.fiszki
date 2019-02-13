@@ -26,7 +26,8 @@ $arr_menu['home'] = array("act_class" => "", "post_name" => "home", "menu_name" 
 
 $js_scripts = "";
 
-if($_SESSION["role"] == 3) {//admin
+if($_SESSION["role"] == 3) {
+	$role_name = "admin";
     $main_php_file = "panel_admin.php";
 
     $arr_menu['accounts'] = array("act_class" => "", "post_name" => "accounts", "menu_name" => "Konta");
@@ -36,18 +37,20 @@ if($_SESSION["role"] == 3) {//admin
     $arr_menu['katalog'] = array("act_class" => "", "post_name" => "katalog", "sub_menu_name" => "Katalog :", "sub_menu_arr" => array("Rasy" => "action=katalog&sel=rasy", "Umaszczenia" => "action=katalog&sel=colors", "Miasta" => "action=katalog&sel=cities", "Sety" => "action=katalog&sel=sety"));
     $arr_menu['dogs'] = array("act_class" => "", "post_name" => "dogs", "menu_name" => "Psy");
 
-}elseif($_SESSION["role"] == 2){//organizer
+}elseif($_SESSION["role"] == 2){
+	$role_name = "organizator";
     $main_php_file = "panel_organizer.php";
     
     $arr_menu['wystawy'] = array("act_class" => "", "post_name" => "wystawy", "menu_name" => "Wystawy");
 
 }else{//role=1 - user
+	$role_name = "uczęstnik";
     $main_php_file = "panel_user.php";
 
     //$arr_menu['dogs'] = array("act_class" => "", "post_name" => "dogs", "menu_name" => "Psy");
     $arr_menu['dogs'] = array("act_class" => "", "post_name" => "dogs", "sub_menu_name" => "Psy :", "sub_menu_arr" => array("Moje psy" => "action=dogs&sub=mydogs", "Nowy pies" => "action=dogs&sub=newdog"));
     
-    $arr_menu['shows'] = array("act_class" => "", "post_name" => "shows", "menu_name" => "Wystawy");
+    $arr_menu['wystawy'] = array("act_class" => "", "post_name" => "wystawy", "menu_name" => "Wystawy");
 }
 
 if(!isset($_GET['action'])){$_GET['action'] = "home";}
@@ -68,7 +71,7 @@ if(isset($arr_menu[$_GET['action']])){
     <link rel="stylesheet" href="CSS/account_tables.css">
     <script type="text/javascript" src="/JS/general.js"></script>
 </head>
-<body>
+<body onload="showErrMsgs()">
 
 <div class="navbar">
     <?php
@@ -96,10 +99,14 @@ if(isset($arr_menu[$_GET['action']])){
 
     ?>
 
+    
+
+
+    
     <div class="login-container">
         <form action="action.php" method="post">
             <input type="hidden" name="action" value="logout">
-            <button type="submit">Logout</button>
+            <button type="submit">Logout (<?=$role_name?>)</button>
         </form>
     </div>
 </div>
@@ -114,6 +121,7 @@ if($_GET['action'] == "home"){
 
 if(isset($main_php_file) AND file_exists($main_php_file)){include($main_php_file);}
 ?>
+<ul id="errList"></ul>
 </body>
 </html>
 <?php
@@ -168,12 +176,17 @@ function fn_generate_password($number)
     return $pass;
 }
 
-function fn_show_report($msg)
+function fn_show_report_old($msg)
 {
-    echo "<div style=\"padding-left:16px\">
-                <h2>Raport:</h2>
+    echo "<div class=\"error_msg\">
                     <p>$msg</p></div>";
 }
+
+function fn_show_report($msg)
+{
+    echo "<input hidden class=\"errMsgInput\" value=\"$msg\">";
+}
+
 
 function fn_waiting_orgs_cnt_span()
 {
@@ -279,6 +292,20 @@ function fn_get_city_from_id($city_id)
     return "";
 }
 
+function fn_get_name_from_list($tablename, $id)
+{
+    global $mysqli;
+
+    $sql = "SELECT `name` FROM `$tablename` WHERE `id` = '$id' LIMIT 1";
+    if($result = $mysqli->query($sql)){
+        if($result->num_rows == 1){
+            return $result->fetch_object()->name;
+        }
+    }else{fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
+
+    return "";
+}
+
 function fn_get_dog_details($dog_id)
 {
     global $mysqli;
@@ -298,6 +325,36 @@ function isValidDate($date, $format= 'Y-m-d'){
     return $date == date($format, strtotime($date));
 }
 
+function fn_select_tytuly_selected($json_tytuly)
+{
+    global $mysqli;
+    $res = "";
+
+    if(!$arr_dog_tytuls = json_decode($json_tytuly)){$arr_dog_tytuls[]="";}
+    $arr_dog_tytuls   = array_flip($arr_dog_tytuls);
+
+    $sql = "SELECT * FROM `tb_list_tytuly` WHERE `grupa_id` = 1 ORDER BY `grupa_id`";
+    if(!$result = $mysqli->query($sql)) { return $res;}
+
+    $res .= "<td align='center' valign='top'>Tytuły:";
+
+    while ($row = $result->fetch_object()) {
+        if(isset($arr_dog_tytuls[$row->id])){$res .= "<BR>".$row->tytulname; }
+    }
+
+    $sql = "SELECT * FROM `tb_list_tytuly` WHERE `grupa_id` = 2 ORDER BY `grupa_id`";
+    if(!$result = $mysqli->query($sql)) { return $res;}
+
+    $res .= "</td><td align='center' valign='top'>Wyszkolenie:";
+
+    while ($row = $result->fetch_object()) {
+        if(isset($arr_dog_tytuls[$row->id])){$res .= "<BR>".$row->tytulname; }
+    }
+
+    $res .= "</td>";
+
+    return $res;
+}
 
 /*
 function fn_get_wystawy_details($show_id, $org_id)

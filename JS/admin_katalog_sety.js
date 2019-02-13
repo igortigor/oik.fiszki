@@ -15,3 +15,8 @@ function activateButtons()
         }
     }
 }
+
+function allowSubmit()
+{
+	
+}

@@ -48,7 +48,9 @@ function select_color(colorId,colorName)
     if (typeof newDog === 'undefined'){
         document.getElementById("submitAdd").disabled = false;
     }
-    if (typeof allowSubmit() === "function") { allowSubmit(); }
+    if (typeof allowSubmit() === "function") {
+    	allowSubmit(); 
+    }
     okno.close();
 }
 

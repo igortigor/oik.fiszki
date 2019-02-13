@@ -1,12 +1,11 @@
+
 function submitform()
 {
-  console.log("We have a doubleclick");
   document.getElementById("confOrgForm").submit();
 }
 
 function submitFormId(formId)
 {
-  console.log("We have a doubleclick on form " + formId);
   document.getElementById(formId).submit();
 }
 
@@ -43,8 +42,6 @@ function letEditInfo()
  
 }
 
-
-
 onerror=handleErr;
 function handleErr(myMsg,myUrl,myRow)
 {
@@ -57,10 +54,36 @@ function handleErr(myMsg,myUrl,myRow)
   return true;
 }
 
-function toggle_visibility(id) {
-       var e = document.getElementById(id);
-       if(e.style.display == 'block')
-          e.style.display = 'none';
-       else
-          e.style.display = 'block';
-   }
+function toggle_visibility(id)
+{
+   var e = document.getElementById(id);
+   if(e.style.display == 'block')
+      e.style.display = 'none';
+   else
+      e.style.display = 'block';
+}
+
+function toggle_hidden(id)
+{
+	var e = document.getElementById(id);
+	e.hidden = !e.hidden;
+}
+
+function showErrMsgs()
+{
+	var ul = document.createElement('ul');
+	
+	var textnode;
+	var node;
+	
+	Array.from(document.getElementsByClassName("errMsgInput")).forEach(el => {
+		
+		node = document.createElement("LI");
+		textnode = document.createTextNode(el.value);
+		node.appendChild(textnode);
+		ul.appendChild(node);
+	});
+	
+	document.body.appendChild(ul);
+	
+}

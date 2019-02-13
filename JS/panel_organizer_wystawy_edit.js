@@ -41,12 +41,14 @@ function activate_edit_form()
 	
 	document.getElementById("delBtnDiv").hidden = true;
 	
+	
+	document.getElementById("afterSaveBlock").hidden = true;
 }
 
 function readonly_clear(item, index)
 {
   document.getElementById(item).readOnly = false;
-  document.getElementById(item).style.borderColor = "red";
+  document.getElementById(item).style.bgColor = "red";
 
 
 }
@@ -54,9 +56,6 @@ function readonly_clear(item, index)
 function submitShowForm()
 {
 	var form = document.getElementById("editShowForm");
-	
-	console.log("showCityID=" + document.getElementById("showCityID").value);
-	console.log("flagaFormActive=" + document.getElementById("flagaFormActive").value);
 	
 	if (form.checkValidity() === true) {
 		if(document.getElementById("showCityID").value != 0 || document.getElementById("flagaFormActive").value == 0){
@@ -77,6 +76,7 @@ function deleteShowActivate()
 
 function submitFormID(form_id)
 {
+	console.log(form_id);
 	document.getElementById(form_id).submit();	
 }
 

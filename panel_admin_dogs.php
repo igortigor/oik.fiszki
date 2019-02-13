@@ -200,37 +200,6 @@ if($result = $mysqli->query($sql)) {
 
 exit();
 
-function fn_select_tytuly_selected($json_tytuly)
-{
-    global $mysqli;
-    $res = "";
-
-    if(!$arr_dog_tytuls = json_decode($json_tytuly)){$arr_dog_tytuls[]="";}
-    $arr_dog_tytuls   = array_flip($arr_dog_tytuls);
-
-    $sql = "SELECT * FROM `tb_list_tytuly` WHERE `grupa_id` = 1 ORDER BY `grupa_id`";
-    if(!$result = $mysqli->query($sql)) { return $res;}
-
-    $res .= "<td align='center' valign='top'>Tytuły:";
-
-    while ($row = $result->fetch_object()) {
-        if(isset($arr_dog_tytuls[$row->id])){$res .= "<BR>".$row->tytulname; }
-    }
-
-    $sql = "SELECT * FROM `tb_list_tytuly` WHERE `grupa_id` = 2 ORDER BY `grupa_id`";
-    if(!$result = $mysqli->query($sql)) { return $res;}
-
-    $res .= "</td><td align='center' valign='top'>Wyszkolenie:";
-
-    while ($row = $result->fetch_object()) {
-        if(isset($arr_dog_tytuls[$row->id])){$res .= "<BR>".$row->tytulname; }
-    }
-
-    $res .= "</td>";
-
-    return $res;
-}
-
 function fn_set_confirm_id($dog_id, $confirmed_id)
 {
     if($confirmed_id != 0 AND $confirmed_id != 1){return false;}

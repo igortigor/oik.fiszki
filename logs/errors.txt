@@ -3,3 +3,109 @@
 2019-02-11 19:07:45	mysql_error: Duplicate entry '4' for key 'PRIMARY'(INSERT INTO `tb_wystawy_pricing` (`id`,`klasa_id`,`price`) VALUES ('4','2','200')) line: 391 file: panel_organizer_wystawy.php
 2019-02-11 20:42:41	mysql_error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY `id`' at line 1(SELECT * FROM `tb_list_rangi` WHERE  ORDER BY `id`) line: 404 file: panel_organizer_wystawy.php
 2019-02-11 20:43:37	mysql_error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY `id`' at line 1(SELECT * FROM `tb_list_rangi` WHERE  ORDER BY `id`) line: 404 file: panel_organizer_wystawy.php
+2019-02-12 12:08:16	mysql_error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '0000-00-00 00:00:00' ORDER BY `W`.`show_date`' at line 8(SELECT `W`.`id`, `W`.`name`, `M`.`name` AS `city`, `W`.`show_date`, `W`.`is_public`, `W`.`arc_datetime`,  `R`.`name` AS `rang`
+	FROM `tb_wystawy` as `W` 
+    LEFT JOIN `tb_list_miasta` AS `M` 
+    ON `W`.`city_id` = `M`.`id`
+    LEFT JOIN `tb_list_rangi` AS `R` 
+    ON `W`.`rank_id` = `R`.`id`
+
+    WHERE `W`.`org_id` = '1' AND `arc_datetime` == '0000-00-00 00:00:00' ORDER BY `W`.`show_date`) line: 263 file: panel_organizer_wystawy.php
+2019-02-12 12:08:18	mysql_error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '0000-00-00 00:00:00' ORDER BY `W`.`show_date`' at line 8(SELECT `W`.`id`, `W`.`name`, `M`.`name` AS `city`, `W`.`show_date`, `W`.`is_public`, `W`.`arc_datetime`,  `R`.`name` AS `rang`
+	FROM `tb_wystawy` as `W` 
+    LEFT JOIN `tb_list_miasta` AS `M` 
+    ON `W`.`city_id` = `M`.`id`
+    LEFT JOIN `tb_list_rangi` AS `R` 
+    ON `W`.`rank_id` = `R`.`id`
+
+    WHERE `W`.`org_id` = '1' AND `arc_datetime` == '0000-00-00 00:00:00' ORDER BY `W`.`show_date`) line: 263 file: panel_organizer_wystawy.php
+2019-02-12 12:08:20	mysql_error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '0000-00-00 00:00:00' ORDER BY `W`.`show_date`' at line 8(SELECT `W`.`id`, `W`.`name`, `M`.`name` AS `city`, `W`.`show_date`, `W`.`is_public`, `W`.`arc_datetime`,  `R`.`name` AS `rang`
+	FROM `tb_wystawy` as `W` 
+    LEFT JOIN `tb_list_miasta` AS `M` 
+    ON `W`.`city_id` = `M`.`id`
+    LEFT JOIN `tb_list_rangi` AS `R` 
+    ON `W`.`rank_id` = `R`.`id`
+
+    WHERE `W`.`org_id` = '1' AND `arc_datetime` == '0000-00-00 00:00:00' ORDER BY `W`.`show_date`) line: 263 file: panel_organizer_wystawy.php
+2019-02-12 12:09:15	mysql_error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '0000-00-00 00:00:00' ORDER BY `W`.`show_date`' at line 8(SELECT `W`.`id`, `W`.`name`, `M`.`name` AS `city`, `W`.`show_date`, `W`.`is_public`, `W`.`arc_datetime`,  `R`.`name` AS `rang`
+	FROM `tb_wystawy` as `W` 
+    LEFT JOIN `tb_list_miasta` AS `M` 
+    ON `W`.`city_id` = `M`.`id`
+    LEFT JOIN `tb_list_rangi` AS `R` 
+    ON `W`.`rank_id` = `R`.`id`
+
+    WHERE `W`.`org_id` = '1' AND `arc_datetime` == '0000-00-00 00:00:00' ORDER BY `W`.`show_date`) line: 263 file: panel_organizer_wystawy.php
+2019-02-12 12:10:20	mysql_error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '0000-00-00 00:00:00' ORDER BY `W`.`show_date`' at line 8(SELECT `W`.`id`, `W`.`name`, `M`.`name` AS `city`, `W`.`show_date`, `W`.`is_public`, `W`.`arc_datetime`,  `R`.`name` AS `rang`
+	FROM `tb_wystawy` as `W` 
+    LEFT JOIN `tb_list_miasta` AS `M` 
+    ON `W`.`city_id` = `M`.`id`
+    LEFT JOIN `tb_list_rangi` AS `R` 
+    ON `W`.`rank_id` = `R`.`id`
+
+    WHERE `W`.`org_id` = '1' AND `arc_datetime` == '0000-00-00 00:00:00' ORDER BY `W`.`show_date`) line: 263 file: panel_organizer_wystawy.php
+2019-02-12 12:10:30	mysql_error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '0000-00-00 00:00:00' ORDER BY `W`.`show_date`' at line 8(SELECT `W`.`id`, `W`.`name`, `M`.`name` AS `city`, `W`.`show_date`, `W`.`is_public`, `W`.`arc_datetime`,  `R`.`name` AS `rang`
+	FROM `tb_wystawy` as `W` 
+    LEFT JOIN `tb_list_miasta` AS `M` 
+    ON `W`.`city_id` = `M`.`id`
+    LEFT JOIN `tb_list_rangi` AS `R` 
+    ON `W`.`rank_id` = `R`.`id`
+
+    WHERE `W`.`org_id` = '1' AND `arc_datetime` == '0000-00-00 00:00:00' ORDER BY `W`.`show_date`) line: 263 file: panel_organizer_wystawy.php
+2019-02-12 12:11:46	mysql_error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '0000-00-00 00:00:00' ORDER BY `W`.`show_date`' at line 8(SELECT `W`.`id`, `W`.`name`, `M`.`name` AS `city`, `W`.`show_date`, `W`.`is_public`, `W`.`arc_datetime`,  `R`.`name` AS `rang`
+	FROM `tb_wystawy` as `W` 
+    LEFT JOIN `tb_list_miasta` AS `M` 
+    ON `W`.`city_id` = `M`.`id`
+    LEFT JOIN `tb_list_rangi` AS `R` 
+    ON `W`.`rank_id` = `R`.`id`
+
+    WHERE `W`.`org_id` = '1' AND `W`.`arc_datetime` == '0000-00-00 00:00:00' ORDER BY `W`.`show_date`) line: 263 file: panel_organizer_wystawy.php
+2019-02-12 12:13:00	mysql_error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '0000-00-00 00:00:00' ORDER BY `W`.`show_date`' at line 8(SELECT `W`.`id`, `W`.`name`, `M`.`name` AS `city`, `W`.`show_date`, `W`.`is_public`, `W`.`arc_datetime`,  `R`.`name` AS `rang`
+	FROM `tb_wystawy` as `W` 
+    LEFT JOIN `tb_list_miasta` AS `M` 
+    ON `W`.`city_id` = `M`.`id`
+    LEFT JOIN `tb_list_rangi` AS `R` 
+    ON `W`.`rank_id` = `R`.`id`
+
+    WHERE `W`.`org_id` = '1' AND `W`.`arc_datetime` == '0000-00-00 00:00:00' ORDER BY `W`.`show_date`) line: 274 file: panel_organizer_wystawy.php
+2019-02-12 13:54:04	mysql_error: Incorrect table name ''(SELECT `name` FROM `` WHERE `id` = '0' LIMIT 1) line: 291 file: index.php
+2019-02-12 16:29:52	mysql_error: Duplicate entry '4-2' for key 'show_id'(INSERT INTO `tb_wystawy_uczestnicy` (`show_id`, `dog_id`, `klasa_id`, `in_datetime`)VALUE('4','2','1','2019-02-12 16:29:52')) line: 301 file: panel_user_wystawy.php
+2019-02-12 20:54:00	error rank_id line: 317 file: panel_organizer_wystawy.php
+2019-02-13 14:56:32	mysql_error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`name` AS `ownername`, `O`.`surname` AS `ownersurname`, `O`.`email`
+	FROM 
+	`' at line 3(SELECT `P`.`nazwa_przydomek`, `P`.`birthday`, `P`.`sex`, `P`.`birthday`,
+	`R`.`name` AS `rasa`, `C`.`name` AS `color`, `K`.`name` AS `klasa`, `U`.`is_payed`,`U`.`in_datetime`
+	`O`.`name` AS `ownername`, `O`.`surname` AS `ownersurname`, `O`.`email`
+	FROM 
+	`tb_wystawy_uczestnicy` AS `U` INNER JOIN `tb_psy` AS `P`
+	ON `U`.`dog_id` = `P`.`id`
+	INNER JOIN `tb_list_klasy` AS `K`
+	ON `U`.`klasa_id` = `K`.`id`
+	INNER JOIN `tb_users` AS `O`
+	ON `P`.`owner_id` = `O`.`id`
+	INNER JOIN `tb_list_rasy` AS `R`
+	ON `P`.`rasa_id` = `R`.`id`
+	INNER JOIN `tb_list_kolory` AS `C`
+	ON `P`.`color_id` = `C`.`id`
+	WHERE `U`.`show_id` = '4' ORDER BY `P`.`id`) line: 564 file: panel_organizer_wystawy.php
+2019-02-13 14:56:39	mysql_error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`name` AS `ownername`, `O`.`surname` AS `ownersurname`, `O`.`email`
+	FROM 
+	`' at line 3(SELECT `P`.`nazwa_przydomek`, `P`.`birthday`, `P`.`sex`, `P`.`birthday`,
+	`R`.`name` AS `rasa`, `C`.`name` AS `color`, `K`.`name` AS `klasa`, `U`.`is_payed`,`U`.`in_datetime`
+	`O`.`name` AS `ownername`, `O`.`surname` AS `ownersurname`, `O`.`email`
+	FROM 
+	`tb_wystawy_uczestnicy` AS `U` INNER JOIN `tb_psy` AS `P`
+	ON `U`.`dog_id` = `P`.`id`
+	INNER JOIN `tb_list_klasy` AS `K`
+	ON `U`.`klasa_id` = `K`.`id`
+	INNER JOIN `tb_users` AS `O`
+	ON `P`.`owner_id` = `O`.`id`
+	INNER JOIN `tb_list_rasy` AS `R`
+	ON `P`.`rasa_id` = `R`.`id`
+	INNER JOIN `tb_list_kolory` AS `C`
+	ON `P`.`color_id` = `C`.`id`
+	WHERE `U`.`show_id` = '4' ORDER BY `P`.`id`) line: 564 file: panel_organizer_wystawy.php
+2019-02-13 20:44:55	mysql_error: (UPDATE `tb_users` SET `role` = '1' WHERE `id` = '2' LIMIT 1) line: 172 file: panel_admin.php
+2019-02-13 20:45:00	mysql_error: (UPDATE `tb_users` SET `is_blocked` = '1' WHERE `id` = '2' LIMIT 1) line: 163 file: panel_admin.php
+2019-02-13 20:45:02	mysql_error: (UPDATE `tb_users` SET `is_blocked` = '0' WHERE `id` = '2' LIMIT 1) line: 163 file: panel_admin.php
+2019-02-13 20:45:09	mysql_error: (UPDATE `tb_users` SET `is_blocked` = '1' WHERE `id` = '2' LIMIT 1) line: 163 file: panel_admin.php
+2019-02-13 20:45:10	mysql_error: (UPDATE `tb_users` SET `is_blocked` = '0' WHERE `id` = '2' LIMIT 1) line: 163 file: panel_admin.php

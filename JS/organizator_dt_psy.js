@@ -1,14 +1,14 @@
 $(document).ready(function() {
 	
-    var table = $('#wystawyTable').DataTable( {
+    var table = $('#psyTable').DataTable( {
     	"ordering": false,
     	"dom": '<"top"i>rt<"bottom"flp><"clear">',
     	
      	
     	initComplete: function () {
-            this.api().columns([4,5]).every( function () {
+            this.api().columns([3,7,8]).every( function () {
                 var column = this;
-                var select = $('<select><option value=""></option></select>')
+                var select = $('<select><option value="">*</option></select>')
                     .appendTo( $(column.header()).empty() )
                     .on( 'change', function () {
                         var val = $.fn.dataTable.util.escapeRegex(
@@ -36,25 +36,46 @@ $(document).ready(function() {
     
     $("#machineStatusTabel_length:first").hide();
     
-    $('#wystawyTable_filter').hide();
+    $('#psyTable_filter').hide();
     
     $('#nameSearch').on( 'keyup', function () {
+        table
+            .columns( 0 )
+            .search( this.value )
+            .draw();
+    } );
+    
+    $('#emailSearch').on( 'keyup', function () {
         table
             .columns( 1 )
             .search( this.value )
             .draw();
     } );
-    
-    $('#citySearch').on( 'keyup', function () {
+        
+    $('#birthSearch').on( 'keyup', function () {
         table
             .columns( 2 )
             .search( this.value )
             .draw();
     } );
     
-    $('#dataSearch').on( 'keyup', function () {
+    $('#rasaSearch').on( 'keyup', function () {
         table
-            .columns( 3 )
+            .columns( 4 )
+            .search( this.value )
+            .draw();
+    } );
+    
+    $('#colorSearch').on( 'keyup', function () {
+        table
+            .columns( 5 )
+            .search( this.value )
+            .draw();
+    } );
+    
+    $('#inDatetimeSearch').on( 'keyup', function () {
+        table
+            .columns( 6 )
             .search( this.value )
             .draw();
     } );
@@ -64,12 +85,10 @@ $(document).ready(function() {
 
 } );
 
-    
 
-
-function selectShow(showId)
+function selectMemberDetails(showId, dogId)
 {
-    var form = document.createElement('form');
+	var form = document.createElement('form');
     form.style.visibility = 'hidden';
     form.method = 'POST';
     form.action = '?action=wystawy';
@@ -77,6 +96,12 @@ function selectShow(showId)
     input = document.createElement("input");
     input.value = showId;
     input.name = "show_id";
+
+    form.appendChild(input);
+    
+    input = document.createElement("input");
+    input.value = dogId;
+    input.name = "info_member_id";
 
     form.appendChild(input);
     

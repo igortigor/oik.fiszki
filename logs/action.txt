@@ -1,0 +1,61 @@
+2019-02-12 13:21:05	action.php 1 POSTS: login_email = igor@poczta.com	login_password = 123	action = login	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 11:21:05	action.php POSTS: login_email = igor@poczta.com	login_password = 123	action = login	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 11:21:05	trying to login igor@poczta.com line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 11:21:05	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'igor@poczta.com' LIMIT 1 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 11:21:05	{"role":"2"} line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 14:58:25	action.php 1 POSTS: action = logout	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 12:58:25	action.php POSTS: action = logout	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 12:58:25	logout! line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 14:58:32	action.php 1 POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 12:58:32	action.php POSTS: login_email = i.andrievsky@mail.ru	login_password = 123	action = login	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 12:58:32	trying to login i.andrievsky@mail.ru line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 12:58:32	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'i.andrievsky@mail.ru' LIMIT 1 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 12:58:32	{"role":"1"} line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 18:50:58	action.php 1 POSTS: action = logout	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 16:50:58	action.php POSTS: action = logout	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 16:50:58	logout! line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 18:51:05	action.php 1 POSTS: login_email = igor@poczta.com	login_password = 123	action = login	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 16:51:05	action.php POSTS: login_email = igor@poczta.com	login_password = 123	action = login	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 16:51:05	trying to login igor@poczta.com line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 16:51:06	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'igor@poczta.com' LIMIT 1 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-12 16:51:06	{"role":"2"} line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 16:27:56	action.php 1 POSTS: login_email = igor@poczta.com	login_password = 123	action = login	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 14:27:56	action.php POSTS: login_email = igor@poczta.com	login_password = 123	action = login	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 14:27:56	trying to login igor@poczta.com line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 14:27:56	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'igor@poczta.com' LIMIT 1 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 14:27:56	{"role":"2"} line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 20:06:47	action.php 1 POSTS: action = logout	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 18:06:47	action.php POSTS: action = logout	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 18:06:47	logout! line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 20:06:52	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 18:06:52	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 18:06:52	trying to login admin@poczta.com line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 18:06:52	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 18:06:52	{"role":"3"} line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 20:11:31	action.php 1 POSTS: action = logout	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 18:11:31	action.php POSTS: action = logout	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 18:11:31	logout! line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 20:11:40	action.php 1 POSTS: login_email = igor@poczta.com	login_password = 123	action = login	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 18:11:40	action.php POSTS: login_email = igor@poczta.com	login_password = 123	action = login	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 18:11:40	trying to login igor@poczta.com line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 18:11:40	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'igor@poczta.com' LIMIT 1 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 18:11:40	{"role":"2"} line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 22:44:39	action.php 1 POSTS: action = logout	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 20:44:39	action.php POSTS: action = logout	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 20:44:39	logout! line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 22:44:47	action.php 1 POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 20:44:47	action.php POSTS: login_email = admin@poczta.com	login_password = 123	action = login	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 20:44:47	trying to login admin@poczta.com line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 20:44:47	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'admin@poczta.com' LIMIT 1 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 20:44:47	{"role":"3"} line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 23:14:05	action.php 1 POSTS: action = logout	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 21:14:05	action.php POSTS: action = logout	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 21:14:05	logout! line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 23:14:15	action.php 1 POSTS: login_email = igor@poczta.com	login_password = 123	action = login	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 21:14:15	action.php POSTS: login_email = igor@poczta.com	login_password = 123	action = login	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 21:14:15	trying to login igor@poczta.com line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 21:14:15	SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = 'igor@poczta.com' LIMIT 1 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 21:14:15	{"role":"2"} line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 23:35:44	action.php 1 POSTS: action = logout	 line:148 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 21:35:44	action.php POSTS: action = logout	 line:16 D:\OSPanel\domains\oik.fiszki.git\action.php
+2019-02-13 21:35:44	logout! line:148 D:\OSPanel\domains\oik.fiszki.git\action.php

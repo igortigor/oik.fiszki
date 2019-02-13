@@ -6,7 +6,7 @@ $(document).ready(function() {
     	
      	
     	initComplete: function () {
-            this.api().columns([4,5]).every( function () {
+            this.api().columns([4]).every( function () {
                 var column = this;
                 var select = $('<select><option value=""></option></select>')
                     .appendTo( $(column.header()).empty() )
@@ -28,10 +28,6 @@ $(document).ready(function() {
 
     
     } );
-    
-    
-    //new $.fn.dataTable.Buttons( table, { buttons: ['copy', 'excel', 'pdf' ]} );
-    
     
     
     $("#machineStatusTabel_length:first").hide();

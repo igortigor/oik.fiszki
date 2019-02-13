@@ -12,4 +12,8 @@ if($_GET['action'] == "dogs"){
     
 }
 
+if($_GET['action'] == "wystawy"){
+	include("panel_user_wystawy.php");
+}
+
 ?>

@@ -13,6 +13,7 @@ if(isset($_POST['newName'])){
 
 if(isset($_POST['update_show_id'])){
 	if(!fn_update_show()){fn_show_report("Nie udało się zmienić wystawę.");}
+	$_POST['show_id'] = $_POST['update_show_id'];
 }
 
 if(isset($_POST['show_id_to_delete'])){
@@ -26,6 +27,26 @@ if(isset($_POST['priceNew']) AND isset($_POST['klasa_id']) AND isset($_POST['pri
 if(isset($_POST['price_show_id']) AND isset($_POST['del_klasa_id'])){
 	if(!fn_del_price_from_show($_POST['price_show_id'], $_POST['del_klasa_id'])){fn_show_report("Nie udało się usunąć cenę.");}
 }
+
+
+if(isset($_POST['to_arch_show_id']) AND is_numeric($_POST['to_arch_show_id'])){
+	if(!fn_move_to_arch_show($_POST['to_arch_show_id'])){fn_show_report("Nie udało się przenieść wystawę do archiwum.");}
+}
+
+if(isset($_POST['from_arch_show_id']) AND is_numeric($_POST['from_arch_show_id'])){
+	if(!fn_move_from_arch_show($_POST['from_arch_show_id'])){fn_show_report("Nie udało się przenieść wystawę Z archiwum.");}
+}
+
+if(isset($_POST['users_show_id']) AND is_numeric($_POST['users_show_id'])){
+	if(fn_show_users_from_show($_POST['users_show_id'])){
+		exit();
+	}else{fn_show_report("Nie można wybrać uczęstników.");}
+}
+
+if (isset($_POST['info_member_id']) AND file_exists("panel_organizer_member_info.php")){
+	include_once("panel_organizer_member_info.php");
+}
+
 
 
 if (isset($_POST['price_show_id'])):
@@ -69,14 +90,14 @@ endif;
 if (!isset($_POST['show_id'])):
 //-----------------<DODAJ WYSTAWE BUTTON + FORM------------------------------------------------
 ?>
-<div style=\"padding-left:16px;\"><img id="newWystBtn" ondblclick="toggle_visibility('newForm');" src='img/add_dodaj.png' title='Dodaj nową wystawę'></img></div>
+<div style="padding-left:16px;"><img id="newWystBtn" ondblclick="toggle_visibility('newForm');" src='img/add_dodaj.png' title='Dodaj nową wystawę'></img></div>
 <div id='newForm' hidden>
-        <table>
+    <table>
         <form action="?action=wystawy" method="POST">
-        <tr><td> <input placeholder='Nazwa nowej wystawy' id='newName' type='text' name='newName' size='40'> </td></tr>
-        <tr><td> <input type='submit' class="button" value='   Utwórz i przejdź do edycji   '> </td></tr>
+        <tr><td> <input placeholder='Nazwa nowej wystawy' id='newName' type='text' name='newName' size='40'> </td><td> <input type='submit' value='Utwórz i przejdź do edycji'> </td></tr>
         </form>
-        </table></div>
+    </table>
+</div>
 <?php
 //-----------------DODAJ WYSTAWE BUTTON + FORM>------------------------------------------------
 else:
@@ -87,6 +108,8 @@ if(!$arr_show_details = fn_get_row_with_id("tb_wystawy", $_POST['show_id'])){
 }
 
 if($arr_show_details['is_public'] == 1){$ispub_bgcolor = "green"; $ispub_text = "TAK";}else{$ispub_bgcolor = "red"; $ispub_text = "NIE";}
+if($arr_show_details['arc_datetime'] == "0000-00-00 00:00:00"){$arch_form_name = "toArchForm"; $arch_icon_name = "archive_white.png"; $arch_title = "Przeniesienie do archiwum";}else{$arch_form_name = "fromArchForm"; $arch_icon_name = "from_archive_white.png";$arch_title = "Przeniesienie Z archiwum";}
+
 //id 	name 	city_id 	show_date 	enter_to_date 	cancel_to_date 	change_class_to_date 	org_id 	ogr_info 	remarks 	rank_id 	adres 	add_datetime 	arc_datetime 	is_public
 //-----------------<EDYCJA WYSTAWY FORM----------------------------------------
 ?>
@@ -96,6 +119,8 @@ if($arr_show_details['is_public'] == 1){$ispub_bgcolor = "green"; $ispub_text = 
     <script type="text/javascript" src="JS/window_list.js"></script>
     
     <form hidden action="?action=wystawy" method="POST" id="delShowForm"><input type="hidden" name="show_id_to_delete" value="<?=$_POST['show_id']?>"></form>
+    <form hidden action="?action=wystawy" method="POST" id="toArchForm"><input type="hidden" name="to_arch_show_id" value="<?=$_POST['show_id']?>"></form>
+    <form hidden action="?action=wystawy" method="POST" id="fromArchForm"><input type="hidden" name="from_arch_show_id" value="<?=$_POST['show_id']?>"></form>
     
 <form action="?action=wystawy" method="POST" id="editShowForm">
 <input type="hidden" name="flagaFormActive" id="flagaFormActive" value="0">
@@ -104,13 +129,8 @@ if($arr_show_details['is_public'] == 1){$ispub_bgcolor = "green"; $ispub_text = 
 <thead><tr>
 	<th style="padding: 0px; text-align: center; height: 58px; width: 280px">
 	
-		<div id="submitBtnDiv" hidden style="padding:0; margin:0;"><input class="button" value="SAVE" onclick="submitShowForm();"/></div>
-		
 		<div style="display:inline-block;">
-	    	<form action="?action=wystawy" method="POST" id="toArchForm">
-			<input type="hidden" name="to_arch_show_id" value="<?=$_POST['show_id']?>">
-			<img id="delWystBtn" onclick="submitFormID('toArchForm');" src='img/archive_white.png' title='Przeniesienie do archiwum'></img>
-			</form>
+			<img onclick="submitFormID('<?=$arch_form_name?>');" src='img/<?=$arch_icon_name?>' title='<?=$arch_title?>'></img>
 		</div>
 			
 		<div id="delBtnDiv" style="padding-left:16px; display:inline-block;"><img id="delWystBtn" ondblclick="deleteShowActivate();" src='img/del-button.png' title='USUŃ WYSTAWĘ'></img></div>
@@ -177,27 +197,31 @@ if($arr_show_details['is_public'] == 1){$ispub_bgcolor = "green"; $ispub_text = 
     <input id="is_public" type="hidden" name="is_public" value="<?=$arr_show_details['is_public']?>"/>
     <td id="isPublicTD" ondblclick="is_public_toggle();" style="background-color: <?=$ispub_bgcolor?>; color: #fff;"><?=$ispub_text?></td>
 </tr>
-
+</form>
 <tr>
     <td colspan="2" align="center">
-    	<div style="display:inline-block;">
-	    	<form action="?action=wystawy" method="POST" id="editShowForm">
-			<input type="hidden" name="price_show_id" value="<?=$_POST['show_id']?>">
-			<input class="button" type="submit" value="EDYTUJ CENY" />
-			</form>
-		</div>
-		<div style="display:inline-block;">	
-			<form action="?action=wystawy" method="POST">
-			<input type="hidden" name="users_show_id" value="<?=$_POST['show_id']?>">
-			<input class="button" type="submit" value="UCZĘSTNIKI (<?=fn_show_users_cnt($_POST['show_id'])?>)" />
-			</form>
+    
+    <div id="submitBtnDiv" hidden style="padding:0; margin:0;"><input class="button" value="SAVE" onclick="submitShowForm();"/></div>
+    	<div id="afterSaveBlock">
+	    	<div style="display:inline-block;">
+		    	<form action="?action=wystawy" method="POST" id="editShowForm">
+				<input type="hidden" name="price_show_id" value="<?=$_POST['show_id']?>">
+				<input id="priceEditBtn" class="button" type="submit" value="EDYTUJ CENY" />
+				</form>
+			</div>
+			<div style="display:inline-block;">	
+				<form action="?action=wystawy" method="POST">
+				<input type="hidden" name="users_show_id" value="<?=$_POST['show_id']?>">
+				<input id="membersBtn" class="button" type="submit" value="UCZĘSTNIKI (<?=fn_show_users_cnt($_POST['show_id'])?>)" />
+				</form>
+			</div>
 		</div>
 	</td>
 </tr>
 
 
 </table>
-</form>
+
 
 
 
@@ -213,8 +237,12 @@ endif;
     <script type="text/javascript" src="libs/DataTables/datatables.min.js"></script>
     <script type="text/javascript" src="JS/panel_organizer_wystawy.js"></script>
     
-
+	
 <?php
+
+if(isset($_POST['show_archiwum']) AND isset($_POST['arc_cbx'])){$sql_add = "AND `W`.`arc_datetime` != '0000-00-00 00:00:00'"; $arc_checked = "checked";}else{$sql_add = "AND `W`.`arc_datetime` = '0000-00-00 00:00:00'"; $arc_checked = "";}
+
+
 	$sql = "SELECT `W`.`id`, `W`.`name`, `M`.`name` AS `city`, `W`.`show_date`, `W`.`is_public`, `W`.`arc_datetime`,  `R`.`name` AS `rang`
 	FROM `tb_wystawy` as `W` 
     LEFT JOIN `tb_list_miasta` AS `M` 
@@ -222,8 +250,8 @@ endif;
     LEFT JOIN `tb_list_rangi` AS `R` 
     ON `W`.`rank_id` = `R`.`id`
 
-    WHERE `W`.`org_id` = '".$arr_user_details['id']."' ORDER BY `W`.`show_date`";
-
+    WHERE `W`.`org_id` = '".$arr_user_details['id']."' $sql_add ORDER BY `W`.`show_date`";
+	
 /*
     $sql = "SELECT `W`.`id`, `W`.`name`, `M`.`name` AS `city`, `W`.`show_date`, `W`.`is_public`, `W`.`arc_datetime` FROM `tb_wystawy` as `W` 
     LEFT JOIN `tb_list_miasta` AS `M` 
@@ -252,7 +280,12 @@ endif;
             }
 
             echo ("</tbody>
-                    <tfoot><tr> <th></th> <th></th> <th align='left'></th> <th align='left'></th> <th align='left'></th> <th align='left'></th> </tr></tfoot>
+                    <tfoot><tr> <th>
+                    				<form action=\"?action=wystawy\" method=\"POST\" id=\"showArchiwumForm\">
+	                    				<input type=\"hidden\" name=\"show_archiwum\" value=\"1\">
+	                    				<input type='checkbox' $arc_checked name='arc_cbx' onchange=\"document.getElementById('showArchiwumForm').submit();\" />
+                    				</form>
+                    			</th> <th align='left'>Archiwum</th> <th></th> <th align='left'></th> <th align='left'></th> <th align='left'></th> </tr></tfoot>
                     </table>");
         }else{fn_show_report("Nie ma danych");}
     }else{fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
@@ -460,6 +493,86 @@ function fn_del_price_from_show($show_id, $klasa_id)
 	
 	if(!$mysqli->query($sql)) {fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__); return false;}
 	return true;
+}
+
+function fn_move_to_arch_show($show_id)
+{
+	global $mysqli;
+
+	$sql = "UPDATE `tb_wystawy` SET `arc_datetime` = '".date("Y-m-d H:i:s")."' WHERE `id` = '$show_id' LIMIT 1";
+	
+	if(!$mysqli->query($sql)) {fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__); return false;}
+	return true;
+}
+
+function fn_move_from_arch_show($show_id)
+{
+	global $mysqli;
+
+	$sql = "UPDATE `tb_wystawy` SET `arc_datetime` = '0000-00-00 00:00:00' WHERE `id` = '$show_id' LIMIT 1";
+	
+	if(!$mysqli->query($sql)) {fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__); return false;}
+	return true;
+}
+
+function fn_show_users_from_show($show_id)
+{
+	global $mysqli;
+
+	$sql = "SELECT `P`.`nazwa_przydomek`, `P`.`birthday`, `P`.`sex`, `P`.`birthday`, `P`.`id` AS `dog_id`,
+	`R`.`name` AS `rasa`, `C`.`name` AS `color`, `K`.`name` AS `klasa`, `U`.`is_payed`,`U`.`in_datetime`,
+	`O`.`name` AS `ownername`, `O`.`surname` AS `ownersurname`, `O`.`email`
+	FROM 
+	`tb_wystawy_uczestnicy` AS `U` INNER JOIN `tb_psy` AS `P`
+	ON `U`.`dog_id` = `P`.`id`
+	INNER JOIN `tb_list_klasy` AS `K`
+	ON `U`.`klasa_id` = `K`.`id`
+	INNER JOIN `tb_users` AS `O`
+	ON `P`.`owner_id` = `O`.`id`
+	INNER JOIN `tb_list_rasy` AS `R`
+	ON `P`.`rasa_id` = `R`.`id`
+	INNER JOIN `tb_list_kolory` AS `C`
+	ON `P`.`color_id` = `C`.`id`
+	WHERE `U`.`show_id` = '$show_id' ORDER BY `P`.`id`";
+	
+	$header = "<link rel=\"stylesheet\" type=\"text/css\" href=\"libs/DataTables/datatables.min.css\"/>
+    <script type=\"text/javascript\" src=\"libs/DataTables/datatables.min.js\"></script>
+    <script type=\"text/javascript\" src=\"JS/organizator_dt_psy.js\"></script>";
+	
+
+    if($result = $mysqli->query($sql)) {
+    	
+    	//<th align='left' ><input id=\"sexSearch\" placeholder=\"PLEC\" class=\"form-control\" /></th>
+        if($result->num_rows > 0){
+
+            $tb = ("<table id=\"psyTable\" class=\"cell-border compact stripe\">
+	            <thead><tr>
+	            <th align='left' ><input id=\"nameSearch\" placeholder=\"NAZWA PSA\" class=\"form-control\" /></th>
+	            <th align='left' ><input id=\"emailSearch\" placeholder=\"EMAIL WŁAŚCICIELA\" class=\"form-control\" /></th>
+	            <th align='left' ><input id=\"birthSearch\" placeholder=\"URODZONY\" class=\"form-control\" /></th>
+	            <th align='left' class = 'select-filter'></th>
+	            <th align='left' ><input id=\"rasaSearch\" placeholder=\"RASA\" class=\"form-control\" /></th>
+	            <th align='left' ><input id=\"colorSearch\" placeholder=\"UMASZCZENIE\" class=\"form-control\" /></th>
+	            <th align='left' ><input id=\"inDatetimeSearch\" placeholder=\"CZAS ZGŁOSZENIA\" class=\"form-control\" /></th>
+	            <th align='left' class = 'select-filter'></th>
+	            <th align='left' class = 'select-filter'></th>
+	            </tr></thead>
+	            <tbody>");
+
+            while ($row = $result->fetch_object()) {
+            	if($row->is_payed == 1){$is_payed = "OPŁACONE"; $paystyle = "style='color: green; background-color: red;'";}else{$is_payed = "NIEOPŁACONE"; $paystyle = "style='color: white; background-color: red;'";}
+                $tb .= ("<tr ondblclick='selectMemberDetails($show_id, $row->dog_id)'><td>$row->nazwa_przydomek</td><td>$row->email</td><td>$row->birthday</td><td>$row->sex</td><td>$row->rasa</td><td>$row->color</td><td>$row->in_datetime</td><td>$row->klasa</td><td $paystyle>$is_payed</td></tr>");
+            }
+
+            $tb .= ("</tbody>
+                    <tfoot><tr> <th>PIES</th> <th>EMAIL WŁAŚCICIELA</th> <th align='left'>URODZONY</th> <th>PŁEC</th> <th align='left'>RASA</th> <th align='left'>UMASZCZENIE</th> <th align='left'>CZAS ZGŁOSZENIA</th> <th align='left'>KLASA</th> <th align='left'>OPŁACONE?</th> </tr></tfoot>
+                    </table>");
+            
+            echo $header.$tb;
+            return true;
+        }else{fn_show_report("Nie ma danych");}
+    }else{fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
+return false;
 }
 ?>
 </div>

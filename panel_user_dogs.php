@@ -1,5 +1,6 @@
 <?php
 if(!defined("MAIN_FILE")) die;
+if(defined("SHOW_FILENAME")) fn_show_report(basename(__FILE__));
 
 if(isset($_POST['add_dog'])){
     if(!fn_add_dog_to_db()){
@@ -113,6 +114,7 @@ function fn_show_my_dogs()
 
     $sql = "SELECT * FROM `tb_psy` WHERE `owner_id` = '".$arr_user['id']."' ORDER BY `id` DESC";
     if($result = $mysqli->query($sql)) {
+    	if($result->num_rows == 0){fn_show_report("Nie ma psów.");}
         while ($row = $result->fetch_object()) {
             if($row->is_confirmed == 1){$td = "<td bgcolor='#7fff00'>TAK</td>";}else{$td = "<td bgcolor='#dc143c'>NIE</td>";}
             echo ("<form id=\"formRow_$row->id\" action=\"?action=dogs&sub=mydogs\" method=\"POST\">

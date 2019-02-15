@@ -1,6 +1,8 @@
 <div style='max-width: 800px; margin: 20px;'>
 <?php
 if(!defined("MAIN_FILE")) die;
+if(defined("SHOW_FILENAME")) fn_show_report(basename(__FILE__));
+
 if(!isset($_GET['action']) OR $_GET['action'] != "wystawy"){exit();}
 if(!$arr_user_details = fn_get_user_details()){fn_show_report("Nieznany oranizator"); exit();}
 

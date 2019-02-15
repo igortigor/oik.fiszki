@@ -1,7 +1,10 @@
 <?php
-fn_log_write("action.php 1 POSTS: ".fn_get_posts_str());
-if(isset($_GET['action']) AND isset($_GET['code'])) {$_POST['action'] = $_GET['action'];}
-if(!isset($_POST['action']) AND !isset($_GET['action'])) die;
+fn_log_write("action.php 1 POSTS: ".fn_get_posts_str(), __LINE__);
+
+if(isset($_GET['confirmcode'])) {$_POST['action'] = "confirm";}
+
+if(!isset($_POST['action'])) die;
+
 date_default_timezone_set('Europe/Warsaw');
 error_reporting(E_ALL | E_STRICT);
 ini_set('display_errors', 'On');
@@ -15,23 +18,28 @@ session_start();
 
 fn_log_write("action.php POSTS: ".fn_get_posts_str(), __LINE__);
 
+if($_POST['action'] == "testmail"){
+fn_send_activation_code("i.andrievsky@mail.ru", $_GET['code']);
+exit();
+}
+
 //-------LOGOUT-------------------
 if($_POST['action'] == "logout"){
-    fn_log_write("logout!");
+    fn_log_write("logout!", __LINE__);
     unset($_SESSION["role"]);
-    header('Location: index.php');
+    header('Location: ../index.php');
     echo "HZ";
     exit();
 }
 
 //-------CONFIRM EMAIL-------------------
-if($_POST['action'] == "confirm"){
+if($_POST['action'] == "confirm" AND isset($_GET['confirmcode'])){
 
-    fn_log_write("trying to confirm. Code: ".$_GET['code'], __LINE__);//$_GET['code']
+    fn_log_write("trying to confirm. Code: ".$_GET['confirmcode'], __LINE__);//$_GET['code']
 
-    if($email = fn_confirm_email($_GET['code'])){
+    if($email = fn_confirm_email($_GET['confirmcode'])){
         $_SESSION["email"] = $email;
-        header('Location: ../index.php');
+        header('Location: index.php');
         exit();
     }
 
@@ -60,7 +68,7 @@ if($_POST['action'] == "register" AND isset($_POST['reg_email'])){
 //-------LOGIN-------------------
 if($_POST['action'] == "login"){
 
-    fn_log_write("trying to login ".$_POST['login_email']);
+    fn_log_write("trying to login ".$_POST['login_email'], __LINE__);
 
     if(valid_email($_POST['login_email'])){
 
@@ -76,7 +84,7 @@ if($_POST['action'] == "login"){
     }else{$answerArr['errorMsg'] = "Invalid E-mail!";}
 
     $srv_answer = json_encode($answerArr);
-    fn_log_write($srv_answer);
+    fn_log_write($srv_answer, __LINE__);
     echo $srv_answer;
     exit();
 }
@@ -93,7 +101,7 @@ function fn_get_user_info($login_email, $pass)
     $login_email = trim(addslashes(stripslashes($login_email)));
 
     $sql = "SELECT `role`, `is_blocked`, `email_comfirmed`, `hash` FROM `tb_users` WHERE `email` = '$login_email' LIMIT 1";
-    fn_log_write($sql);
+    //fn_log_write($sql);
     if($result=$mysqli->query($sql))
     {
         if($result->num_rows == 1)
@@ -120,7 +128,7 @@ function fn_confirm_email($code)
 {
     global $mysqli;
 
-    fn_log_write("fn_confirm_email: ".$code);
+    fn_log_write("fn_confirm_email: ".$code, __LINE__);
 
     $code = trim(addslashes(stripslashes($code)));
 
@@ -134,7 +142,7 @@ function fn_confirm_email($code)
             if($mysqli->query($sql)){
                 return $email;
             }else{
-                fn_log_write("mysql_err: ".$sql."\r\nerr_desc: ".$mysqli->error);
+                fn_log_write("mysql_err: ".$sql."\r\nerr_desc: ".$mysqli->error, __LINE__);
             }
         }
     }
@@ -148,14 +156,19 @@ function valid_email($str) {
 function fn_log_write($msg, $line = __LINE__)
 {
     $fp = fopen("logs/action.txt","a");
-    fputs($fp,date("Y-m-d H:i:s")."\t".$msg." line:".$line." ".__FILE__."\r\n");
+    fputs($fp,date("Y-m-d H:i:s")."\t".$msg." line:".$line." ".basename(__FILE__)."\r\n");
     fclose($fp);
 }
 
 function fn_get_posts_str()
 {
     $postlink_text = "";
-    foreach ($_POST as $key => $value) {$postlink_text = $postlink_text.$key." = ".$value."\t";}
+    foreach ($_POST as $key => $value) {$postlink_text .= $key." = ".$value."\t";}
+    
+    if(count($_GET)>0){
+    	$postlink_text .= "GETS:\t";
+		foreach ($_GET as $key => $value) {$postlink_text .= $key." = ".$value."\t";}
+	}
     return $postlink_text;
 }
 
@@ -174,7 +187,7 @@ function fn_add_new_user($reg_email, $reg_password, $role)
 
     if(!$mysqli->query($sql)){
 
-        fn_log_write("mysql_err: ".$mysqli->error);
+        fn_log_write("mysql_err: ".$mysqli->error, __LINE__);
 
         if (strpos($mysqli->error, "Duplicate entry") !== false){
             $answerArr['errorMsg'] = "User with that email already exists.";
@@ -192,22 +205,34 @@ function fn_add_new_user($reg_email, $reg_password, $role)
 
 function fn_send_activation_code($email, $activation)
 {
-    $subject = "Please confirm email";
+    $url = "https://oik.fiszki.net/action.php?confirmcode=$activation";
 
     $message = "<html><head><title>Confirmation</title></head>
                 <body>
                 <h2>Welcome!</h2>
-                <p><a href=\"https://test2412.com/action.php?confirm=$activation\">Please confirm email via this link</a></p>
+                <p><a href=\"$url\">Please confirm email via this link</a></p>
                 </body>
                 </html>";
-
-// Always set content-type when sending HTML email
-    $headers = "MIME-Version: 1.0" . "\r\n";
+    
+    $to      = $email;
+	$subject = 'Please confirm email';
+	$message = $message;
+	$headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+	$headers .= 'From: activation@oik.fiszki.net' . "\r\n";
+	$headers .= 'Reply-To: activation@oik.fiszki.net' . "\r\n";
+	$headers .= 'X-Mailer: PHP/' . phpversion();
 
-// More headers
-    $headers .= 'From: <activation@oik.pl>' . "\r\n";
-
-    mail($email,$subject,$message,$headers);
+	if (preg_match("/@poczta.pl$/i", $email)) {
+		$mail_state = "WITHOUT SENDING";
+	}elseif (mail($email,$subject,$message,$headers)){
+    	$mail_state = "SENT";
+    }else{
+    	$mail_state = "ERROR";
+    }
+    
+    $fp = fopen("logs/mail.txt","a");
+    fputs($fp,date("Y-m-d H:i:s")."\tSENT MAIL with Activation URL: ".$url." State: ".$mail_state."\r\n");
+    fclose($fp);
 }
 ?>

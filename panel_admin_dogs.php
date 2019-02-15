@@ -1,5 +1,6 @@
 <?php
 if(!defined("MAIN_FILE")) die;
+if(defined("SHOW_FILENAME")) fn_show_report(basename(__FILE__));
 ?>
     <link rel="stylesheet" type="text/css" href="libs/DataTables/datatables.min.css"/>
     <link rel="stylesheet" type="text/css" href="libs/chosen/chosen.min.css"/>

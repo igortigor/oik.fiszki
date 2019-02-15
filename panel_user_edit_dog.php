@@ -1,5 +1,7 @@
 <?php
 if(!defined("MAIN_FILE")) die;
+if(defined("SHOW_FILENAME")) fn_show_report(basename(__FILE__));
+
 if(!isset($_POST['edit_dog_id'])){ exit();}
 
 if(!$arr_dog_details = fn_get_dog_details($_POST['edit_dog_id'])){ exit(); }

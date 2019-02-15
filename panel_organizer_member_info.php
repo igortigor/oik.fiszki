@@ -1,5 +1,7 @@
 <?php
 if(!defined("MAIN_FILE")) die;
+if(defined("SHOW_FILENAME")) fn_show_report(basename(__FILE__));
+
 if(!isset($_POST['info_member_id']) OR !is_numeric($_POST['info_member_id']) OR !isset($_POST['show_id']) OR !is_numeric($_POST['show_id'])){exit();}
 
 $show_id = $_POST['show_id']; $dog_id = $_POST['info_member_id'];

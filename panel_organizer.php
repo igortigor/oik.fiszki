@@ -1,5 +1,6 @@
 <?php
 if(!defined("MAIN_FILE")) die;
+if(defined("SHOW_FILENAME")) fn_show_report(basename(__FILE__));
 
 if($_GET['action'] == "wystawy"){
 	

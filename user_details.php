@@ -1,6 +1,8 @@
 <?php
 if(!defined("MAIN_FILE")) die;
 
+fn_show_report("user_details.php ".$_SESSION["email"]);
+
 if(isset($_POST['update_user_info']) AND isset($_POST['user_id']) AND is_numeric($_POST['user_id']))
 {
     if(isset($_POST['name'])){$name = trim(addslashes(stripslashes($_POST['name'])));}else{$name="";}
@@ -80,7 +82,7 @@ if($result = $mysqli->query($sql))
        
         </table></div>");
 
-    }
+    }else{unset($_SESSION["role"]);}
 }else{fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
 
 ?>

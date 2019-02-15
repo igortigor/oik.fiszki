@@ -23,9 +23,18 @@ document.getElementById("addDogForm").addEventListener("keyup", function(){
 });
 
 
+function checkFormNewDog()
+{
+
+
+}
+
 function allowSubmit()
 {
-	if(document.getElementById("confirmed_flag").value == 1){return false;}
+    var cf = document.getElementById("confirmed_flag");
+
+	if(cf != null && cf.value == 1)return false;
+
     if (document.getElementById("addDogForm").checkValidity() === true) {
         if(document.getElementById("inputColor").value.length > 0){
             document.getElementById("addDogSubmit").disabled = false;

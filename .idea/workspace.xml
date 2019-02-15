@@ -2,16 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="751cf7bb-2df5-4b12-819c-195c5afbd766" name="Default Changelist" comment="added dogs folder to admin&#10;added dog list table to admin&#10;added dog confirmation to admin">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JS/admin_dogs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel_admin_dogs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/user_new_dog.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/user_new_dog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/action.php" beforeDir="false" afterPath="$PROJECT_DIR$/action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_bkp_03022019.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_bkp_04022019.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/action.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/action.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info_tmp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/info_tmp.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel_admin_bkp.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_admin_bkp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel_admin_dogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_admin_dogs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel_admin_katalog.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_admin_katalog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel_admin_user_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_admin_user_info.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel_organizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_organizer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel_organizer_member_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_organizer_member_info.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel_organizer_wystawy.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_organizer_wystawy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel_user_details.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel_user_dogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_user_dogs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel_user_edit_dog.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_user_edit_dog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel_user_new_dog.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_user_new_dog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel_user_wystawy.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_user_wystawy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,41 +34,24 @@
     <pharConfigPath>$PROJECT_DIR$/chosen/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.8973105">
+    <splitter split-orientation="horizontal" split-proportion="0.40331808">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/panel_admin.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1011">
-                  <caret line="29" column="34" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="34" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/panel_admin_katalog.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="284">
-                  <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+                  <caret line="114" selection-start-line="114" selection-end-line="114" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="e#2672#4027#0#PHP" />
                     <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#form#0;n#table#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#td#2;n#tr#0;n#form#0;n#table#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#td#3;n#tr#0;n#form#0;n#table#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#td#4;n#tr#0;n#form#0;n#table#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#fn_update_rasa#0;n#!!top" />
                     <element signature="n#fn_insert_new_rasa#0;n#!!top" />
@@ -69,20 +63,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/panel_admin_dogs.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="378">
+                <state relative-caret-position="3077">
                   <caret line="181" column="154" selection-start-line="181" selection-start-column="154" selection-end-line="181" selection-end-column="154" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#th#0;n#tr#0;n#tfoot#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#th#1;n#tr#0;n#tfoot#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#th#2;n#tr#0;n#tfoot#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#th#3;n#tr#0;n#tfoot#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#th#4;n#tr#0;n#tfoot#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#th#5;n#tr#0;n#tfoot#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#th#6;n#tr#0;n#tfoot#0;n#!!top" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -92,10 +74,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="391">
                   <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#a#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -104,11 +82,7 @@
             <entry file="file://$PROJECT_DIR$/panel_user_edit_dog.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="357">
-                  <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="119" />
-                  <folding>
-                    <element signature="e#1095#1134#0#HTML" expanded="true" />
-                    <element signature="e#7859#7878#0#HTML" expanded="true" />
-                  </folding>
+                  <caret line="21" selection-start-line="21" selection-end-line="21" />
                 </state>
               </provider>
             </entry>
@@ -116,11 +90,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/panel_user_dogs.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1045">
+                <state relative-caret-position="425">
                   <caret line="25" selection-start-line="25" selection-end-line="30" selection-end-column="6" />
-                  <folding>
-                    <element signature="e#447#486#0#HTML" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -128,11 +99,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1173">
-                  <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                  </folding>
+                <state relative-caret-position="1428">
+                  <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -164,60 +132,33 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/panel_user_new_dog.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="178">
+                  <caret line="128" column="47" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="47" />
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/JS/login.js">
+            <entry file="file://$PROJECT_DIR$/JS/user_new_dog.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-450">
-                  <caret line="57" column="37" lean-forward="true" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/JS/admin_katalog_rasy.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="680">
-                  <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+                <state relative-caret-position="173">
+                  <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/JS/admin_dogs.js">
+            <entry file="file://$PROJECT_DIR$/config.inc.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="485">
-                  <caret line="56" column="25" lean-forward="true" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/JS/user_new_dog.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="31" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="31" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/JS/general.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/action.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="808">
-                  <caret line="150" column="14" lean-forward="true" selection-start-line="150" selection-start-column="14" selection-end-line="150" selection-end-column="33" />
+                <state relative-caret-position="51">
+                  <caret line="3" column="20" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="20" />
                 </state>
               </provider>
             </entry>
@@ -255,7 +196,11 @@
       <find>dog_id</find>
       <find>$readonly_confirmed</find>
       <find>$disabled_confirmed</find>
+      <find>confirmed_flag</find>
     </findStrings>
+    <dirStrings>
+      <dir>D:\GOOGLE_DRIVE\SERVER\KEI.PL\oik.fiszki.net</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -291,7 +236,6 @@
         <option value="$PROJECT_DIR$/JS/general.js" />
         <option value="$PROJECT_DIR$/panel_user_details.php" />
         <option value="$PROJECT_DIR$/JS/window_list.js" />
-        <option value="$PROJECT_DIR$/JS/user_new_dog.js" />
         <option value="$PROJECT_DIR$/libs/tigra_calendar/tcal.js" />
         <option value="$PROJECT_DIR$/panel_user_new_dog.php" />
         <option value="$PROJECT_DIR$/CSS/topnav.css" />
@@ -304,6 +248,7 @@
         <option value="$PROJECT_DIR$/list_rasy.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/panel_admin_katalog.php" />
+        <option value="$PROJECT_DIR$/JS/user_new_dog.js" />
       </list>
     </option>
   </component>
@@ -325,13 +270,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="oik.fiszki.git" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oik.fiszki.git" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oik.fiszki.git" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oik.fiszki.git" type="462c0819:PsiDirectoryNode" />
-              <item name="JS" type="462c0819:PsiDirectoryNode" />
+              <item name="oik.fiszki.net" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oik.fiszki.net" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -394,6 +334,7 @@
       <workItem from="1549704555155" duration="753000" />
       <workItem from="1549705323380" duration="99000" />
       <workItem from="1549705539967" duration="13047000" />
+      <workItem from="1550252718759" duration="2552000" />
     </task>
     <task id="LOCAL-00001" summary="test commit from PS">
       <created>1549705596576</created>
@@ -406,7 +347,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211141000" />
+    <option name="totallyTimeSpent" value="213693000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -418,15 +359,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13753057" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.06823028" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32922733" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.15901455" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3336945" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -437,6 +376,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32922733" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32922733" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32922733" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32922733" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -635,13 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JS/admin_katalog_test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -694,13 +627,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/panel_user_details.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/panel_user_details.php" />
     <entry file="file://$PROJECT_DIR$/panel_user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -708,10 +635,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/panel_user_new_dog.php">
+    <entry file="file://$PROJECT_DIR$/panel_admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="493">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/panel_admin_dogs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3077">
+          <caret line="181" column="154" selection-start-line="181" selection-start-column="154" selection-end-line="181" selection-end-column="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list_rasy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/panel_user_edit_dog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/panel_user_dogs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="30" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -736,29 +698,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/panel_admin.php">
+    <entry file="file://$PROJECT_DIR$/panel_admin_katalog.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1011">
-          <caret line="29" column="34" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="34" />
+        <state relative-caret-position="284">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#fn_update_rasa#0;n#!!top" />
+            <element signature="n#fn_insert_new_rasa#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JS/admin_katalog_rasy.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
-          <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-450">
-          <caret line="57" column="37" lean-forward="true" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -771,107 +742,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/action.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="808">
-          <caret line="150" column="14" lean-forward="true" selection-start-line="150" selection-start-column="14" selection-end-line="150" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/user_new_dog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/panel_user_dogs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1045">
-          <caret line="25" selection-start-line="25" selection-end-line="30" selection-end-column="6" />
-          <folding>
-            <element signature="e#447#486#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/panel_user_edit_dog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="119" />
-          <folding>
-            <element signature="e#1095#1134#0#HTML" expanded="true" />
-            <element signature="e#7859#7878#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="2550">
+          <caret line="150" selection-start-line="150" selection-end-line="150" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JS/admin_dogs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="485">
-          <caret line="56" column="25" lean-forward="true" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/panel_admin_dogs.php">
+    <entry file="file://$PROJECT_DIR$/panel_user_new_dog.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="181" column="154" selection-start-line="181" selection-start-column="154" selection-end-line="181" selection-end-column="154" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#th#0;n#tr#0;n#tfoot#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#th#1;n#tr#0;n#tfoot#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#th#2;n#tr#0;n#tfoot#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#th#3;n#tr#0;n#tfoot#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#th#4;n#tr#0;n#tfoot#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#th#5;n#tr#0;n#tfoot#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#th#6;n#tr#0;n#tfoot#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="178">
+          <caret line="128" column="47" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/list_rasy.php">
+    <entry file="file://$PROJECT_DIR$/JS/user_new_dog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="173">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/config.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/panel_admin_katalog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#2672#4027#0#PHP" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#form#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#0;n#form#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#3;n#tr#0;n#form#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#4;n#tr#0;n#form#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#fn_update_rasa#0;n#!!top" />
-            <element signature="n#fn_insert_new_rasa#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="20" />
         </state>
       </provider>
     </entry>

@@ -122,3 +122,12 @@ git add .
 git commit -m 'your message here'
 git push
 
+
+
+TRUNCATE `tb_wystawy`;
+TRUNCATE `tb_psy`;
+TRUNCATE `tb_users`;
+TRUNCATE `tb_wystawy_pricing`;
+TRUNCATE `tb_wystawy_uczestnicy`;
+
+

@@ -1,16 +1,19 @@
 <?php
+if(!isset($_GET['email'])){exit();}
 
-$date = "0000-00-00";
-if(isValidDate($date)){echo $date." valid<BR>";}else{echo $date." Invalid<BR>";}
 
-$date = "2019-01-24";
-if(isValidDate($date)){echo $date." valid<BR>";}else{echo $date." Invalid<BR>";}
+if (preg_match("/@poczta.pl$/i", $_GET['email'])) {
 
-$date = "2019-02-13";
-if(isValidDate($date)){echo $date." valid<BR>";}else{echo $date." Invalid<BR>";}
+echo " nasza poczta";
 
-function isValidDate($date, $format= 'Y-m-d'){
-    return $date == date($format, strtotime($date));
 }
+
+
+exit();
+ if (mail('i.andrievsky@mail.ru', 'Server test', 'Test message from server')) {
+    echo "Sent";
+  } else {
+    echo "Error";
+  }
 
 ?>

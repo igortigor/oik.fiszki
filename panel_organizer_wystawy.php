@@ -6,6 +6,9 @@ if(defined("SHOW_FILENAME")) fn_show_report(basename(__FILE__));
 if(!isset($_GET['action']) OR $_GET['action'] != "wystawy"){exit();}
 if(!$arr_user_details = fn_get_user_details()){fn_show_report("Nieznany oranizator"); exit();}
 
+if(!$arr_user_details['org_comfirmed']){fn_show_report("Administrator najpierw musi potwierdzić konto organizatora."); exit();}
+
+
 if(isset($_POST['newName'])){
 	if(!$_POST['show_id'] = fn_create_show($_POST['newName'], $arr_user_details['id'])){
 		fn_show_report("Nie udało się stworzyć wystawę.");
@@ -42,7 +45,7 @@ if(isset($_POST['from_arch_show_id']) AND is_numeric($_POST['from_arch_show_id']
 if(isset($_POST['users_show_id']) AND is_numeric($_POST['users_show_id'])){
 	if(fn_show_users_from_show($_POST['users_show_id'])){
 		exit();
-	}else{fn_show_report("Nie można wybrać uczęstników.");}
+	}else{fn_show_report("Nie można wybrać uczestników.");}
 }
 
 if (isset($_POST['info_member_id']) AND file_exists("panel_organizer_member_info.php")){
@@ -145,7 +148,7 @@ if($arr_show_details['arc_datetime'] == "0000-00-00 00:00:00"){$arch_form_name =
 
 <tr>
     <td align="right">Nazwa wystawy</td>
-    <td><input id="showName" name="showname" value="<?=$arr_show_details['name']?>" maxlength="35" size='35' readonly></td>
+    <td><input id="showName" name="showname" value="<?=$arr_show_details['name']?>" maxlength="100" size='65' readonly></td>
 </tr>
 
 <tr id="trCity">
@@ -156,27 +159,27 @@ if($arr_show_details['arc_datetime'] == "0000-00-00 00:00:00"){$arch_form_name =
 
 <tr>
     <td align="right">Data wystawy</td>
-    <td><input class="tcal" id="showDate" name="showdate" value="<?=$arr_show_details['show_date']?>" readonly></td>
+    <td><input class="tcal" id="showDate" name="showdate" value="<?=$arr_show_details['show_date']?>" readonly disabled></td>
 </tr>
 
 <tr>
     <td align="right">enter_to_date</td>
-    <td><input class="tcal" id="enterToDate" name="enter_to_date" value="<?=$arr_show_details['enter_to_date']?>" readonly></td>
+    <td><input class="tcal" id="enterToDate" name="enter_to_date" value="<?=$arr_show_details['enter_to_date']?>" readonly disabled></td>
 </tr>
 
 <tr>
     <td align="right">cancel_to_date</td>
-    <td><input class="tcal" id="cancelToDate" name="cancel_to_date" value="<?=$arr_show_details['cancel_to_date']?>" readonly></td>
+    <td><input class="tcal" id="cancelToDate" name="cancel_to_date" value="<?=$arr_show_details['cancel_to_date']?>" readonly disabled></td>
 </tr>
 
 <tr>
     <td align="right">change_class_to_date</td>
-    <td><input class="tcal" id="schangeClassToDate" name="change_class_to_date" value="<?=$arr_show_details['change_class_to_date']?>" readonly></td>
+    <td><input class="tcal" id="schangeClassToDate" name="change_class_to_date" value="<?=$arr_show_details['change_class_to_date']?>" readonly disabled></td>
 </tr>
 
 <tr>
     <td align="right">org_info</td>
-    <td><textarea id="orgInfo" name="org_info" cols="50" rows="5" readonly><?=$arr_show_details['org_info']?></textarea></td>
+    <td><textarea id="orgInfo" name="org_info" cols="50" rows="5" readonly ><?=$arr_show_details['org_info']?></textarea></td>
 </tr>
 
 <tr>
@@ -191,7 +194,7 @@ if($arr_show_details['arc_datetime'] == "0000-00-00 00:00:00"){$arch_form_name =
 
 <tr>
     <td align="right">adres</td>
-    <td><textarea id="adres" cols="50" rows="5" readonly><?=$arr_show_details['adres']?></textarea></td>
+    <td><textarea name="adres" id="adresWystawy" cols="50" rows="5" readonly><?=$arr_show_details['adres']?></textarea></td>
 </tr>
 
 <tr>
@@ -214,7 +217,7 @@ if($arr_show_details['arc_datetime'] == "0000-00-00 00:00:00"){$arch_form_name =
 			<div style="display:inline-block;">	
 				<form action="?action=wystawy" method="POST">
 				<input type="hidden" name="users_show_id" value="<?=$_POST['show_id']?>">
-				<input id="membersBtn" class="button" type="submit" value="UCZĘSTNIKI (<?=fn_show_users_cnt($_POST['show_id'])?>)" />
+				<input id="membersBtn" class="button" type="submit" value="UCZESTNIKI (<?=fn_show_users_cnt($_POST['show_id'])?>)" />
 				</form>
 			</div>
 		</div>
@@ -316,21 +319,26 @@ function fn_update_show()
 	if(!isset($_POST['flagaFormActive'])){return false;}
 	
 	if(isset($_POST['update_show_id']) AND is_numeric($_POST['update_show_id'])){$show_id = $_POST['update_show_id'];}else{fn_err_write("error update_show_id", __LINE__, __FILE__); return false;}
-	if(isset($_POST['city_id']) AND is_numeric($_POST['city_id'])){$city_id = $_POST['city_id'];}else{fn_err_write("error city_id", __LINE__, __FILE__); return false;}
-	if(isset($_POST['showname'])){$showname = trim(addslashes(stripslashes($_POST['showname'])));}else{fn_err_write("error showname", __LINE__, __FILE__); return false;}
-	if(isset($_POST['is_public']) AND is_numeric($_POST['is_public'])){$is_public = $_POST['is_public'];}else{fn_err_write("error is_public", __LINE__, __FILE__); return false;}
-	if(isset($_POST['showdate']) AND isValidDate($_POST['showdate'])){$showdate = $_POST['showdate'];}else{fn_err_write("error showdate", __LINE__, __FILE__); return false;}
-	if(isset($_POST['enter_to_date']) AND isValidDate($_POST['enter_to_date'])){$enter_to_date = $_POST['enter_to_date'];}else{fn_err_write("error enter_to_date", __LINE__, __FILE__); return false;}
-	if(isset($_POST['cancel_to_date']) AND isValidDate($_POST['cancel_to_date'])){$cancel_to_date = $_POST['cancel_to_date'];}else{fn_err_write("error cancel_to_date", __LINE__, __FILE__); return false;}
-	if(isset($_POST['change_class_to_date']) AND isValidDate($_POST['change_class_to_date'])){$change_class_to_date = $_POST['change_class_to_date'];}else{fn_err_write("error change_class_to_date", __LINE__, __FILE__); return false;}
-	
-	if(isset($_POST['remarks'])){$remarks = trim(addslashes(stripslashes($_POST['remarks'])));}else{fn_err_write("error remarks", __LINE__, __FILE__); return false;}
-	if(isset($_POST['org_info'])){$org_info = trim(addslashes(stripslashes($_POST['org_info'])));}else{fn_err_write("error org_info", __LINE__, __FILE__); return false;}
-	if(isset($_POST['rank_id']) AND is_numeric($_POST['rank_id'])){$rank_id = $_POST['rank_id'];}else{fn_err_write("error rank_id", __LINE__, __FILE__); return false;}
-	
+    if(isset($_POST['is_public']) AND is_numeric($_POST['is_public'])){$is_public = $_POST['is_public'];}else{fn_err_write("error is_public", __LINE__, __FILE__); return false;}
+
 	if($_POST['flagaFormActive'] == 1){
 
-		$sql = "UPDATE `tb_wystawy` SET 
+        if(isset($_POST['city_id']) AND is_numeric($_POST['city_id'])){$city_id = $_POST['city_id'];}else{fn_err_write("error city_id", __LINE__, __FILE__); return false;}
+        if(isset($_POST['showname'])){$showname = trim(addslashes(stripslashes($_POST['showname'])));}else{fn_err_write("error showname", __LINE__, __FILE__); return false;}
+
+        if(isset($_POST['showdate']) AND isValidDate($_POST['showdate'])){$showdate = $_POST['showdate'];}else{fn_err_write("error showdate", __LINE__, __FILE__); return false;}
+        if(isset($_POST['enter_to_date']) AND isValidDate($_POST['enter_to_date'])){$enter_to_date = $_POST['enter_to_date'];}else{fn_err_write("error enter_to_date", __LINE__, __FILE__); return false;}
+        if(isset($_POST['cancel_to_date']) AND isValidDate($_POST['cancel_to_date'])){$cancel_to_date = $_POST['cancel_to_date'];}else{fn_err_write("error cancel_to_date", __LINE__, __FILE__); return false;}
+        if(isset($_POST['change_class_to_date']) AND isValidDate($_POST['change_class_to_date'])){$change_class_to_date = $_POST['change_class_to_date'];}else{fn_err_write("error change_class_to_date", __LINE__, __FILE__); return false;}
+
+        if(isset($_POST['remarks'])){$remarks = trim(addslashes(stripslashes($_POST['remarks'])));}else{fn_err_write("error remarks", __LINE__, __FILE__); return false;}
+        if(isset($_POST['org_info'])){$org_info = trim(addslashes(stripslashes($_POST['org_info'])));}else{fn_err_write("error org_info", __LINE__, __FILE__); return false;}
+        if(isset($_POST['rank_id']) AND is_numeric($_POST['rank_id'])){$rank_id = $_POST['rank_id'];}else{fn_err_write("error rank_id", __LINE__, __FILE__); return false;}
+        if(isset($_POST['adres'])){$adres = trim(addslashes(stripslashes($_POST['adres'])));}else{fn_err_write("error adres", __LINE__, __FILE__); return false;}
+
+
+
+        $sql = "UPDATE `tb_wystawy` SET 
 		`name` = '$showname',
 		`city_id` = '$city_id',
 		`show_date` = '$showdate',
@@ -340,6 +348,7 @@ function fn_update_show()
 		`org_info` = '$org_info',
 		`remarks` = '$remarks',
 		`rank_id` = '$rank_id',
+		`adres` = '$adres',
 		`is_public` = '$is_public'
 		WHERE `id` = '$show_id' LIMIT 1";
 	}else{
@@ -347,8 +356,7 @@ function fn_update_show()
 		$sql = "UPDATE `tb_wystawy` SET `is_public` = '$is_public' WHERE `id` = '$show_id' LIMIT 1";
 	}
 	
-
-    if(!$mysqli->query($sql)){fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
+	if(!$mysqli->query($sql)){fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
 
 return true;
 }
@@ -361,7 +369,7 @@ function fn_delete_show($show_id)
     
     if( ($show_users_cnt = fn_show_users_cnt($show_id)) === false){fn_show_report("Database error. Contact with administrator."); return false;}
     
-    if( $show_users_cnt != 0){fn_show_report("Nie można usuwać wystawy z uczęstnikami ($show_users_cnt szt.)<BR>Tylko przenieść do archiwum."); return false;}  
+    if( $show_users_cnt != 0){fn_show_report("Nie można usuwać wystawy z uczestnikami ($show_users_cnt szt.)<BR>Tylko przenieść do archiwum."); return false;}
     
     if(($sp_cnt = fn_delete_show_pricing($show_id))===false){fn_show_report("Database error. Contact with administrator."); return false;} 
     	

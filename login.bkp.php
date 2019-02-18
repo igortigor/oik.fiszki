@@ -84,7 +84,7 @@ if(isset($_POST['username'])){$username = $_POST['username'];}else{$username = "
             <h2 class="text-center">Register</h2>
             <div class="form-group">
                 <select class="form-control">
-                    <option>Uczęstnik</option>
+                    <option>Uczestnik</option>
                     <option>Organizator</option>
                 </select>
             </div>

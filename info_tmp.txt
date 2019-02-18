@@ -1,5 +1,7 @@
 KPQPg9YHq8sVwSmZ
 
+
+
 CREATE TABLE IF NOT EXISTS `tb_list_tytuly` (
   `id` int(1) unsigned NOT NULL AUTO_INCREMENT,
   `group` varchar(50) NOT NULL DEFAULT '',

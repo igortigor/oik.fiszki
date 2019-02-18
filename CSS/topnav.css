@@ -160,11 +160,11 @@ body {
 .w3-badge,.w3-tag{background-color:#000;color:#fff;display:inline-block;padding-left:8px;padding-right:8px;text-align:center}.w3-badge{border-radius:50%}
 .w3-red,.w3-hover-red:hover{color:#fff!important;background-color:#f44336!important}
 
-ul {
+.errListUl {
   list-style: none;
 }
 
-ul li::before {
+.errListUl li::before {
   content: "\2022";
   color: red;
   font-weight: bold;

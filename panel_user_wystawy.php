@@ -7,6 +7,13 @@ if(!isset($_GET['action']) OR $_GET['action'] != "wystawy"){exit();}
 if(!$arr_user_details = fn_get_user_details()){fn_show_report("Nieznany użytkownik"); exit();}
 
 
+/*
+echo ("<pre>");
+print_r($arr_rasy);
+echo ("</pre>");
+*/
+
+
 //----------------------------<SHOW INFO---------------------------------------------
 if (isset($_POST['show_id']) AND is_numeric($_POST['show_id'])):
 
@@ -126,7 +133,7 @@ endif;
 
 
 
-	//-------------------------<LISTA WYSTAW UCZĘSTNIKA-----------------------------------------------
+	//-------------------------<LISTA WYSTAW UCZESTNIKA-----------------------------------------------
 ?>
     <link rel="stylesheet" type="text/css" href="libs/DataTables/datatables.min.css"/>
     <script type="text/javascript" src="libs/DataTables/datatables.min.js"></script>
@@ -175,7 +182,7 @@ endif;
         }else{fn_show_report("Nie ma danych");}
     }else{fn_err_write("mysql_error: ".$mysqli->error. "($sql)", __LINE__, __FILE__);}
 
-//--------------------LISTA WYSTAW UCZĘSTNIKA>-----------------------------------
+//--------------------LISTA WYSTAW UCZESTNIKA>-----------------------------------
 function fn_show_selected_dog($dog_id, $show_id)
 {
 	if(!$arr_dog_details = fn_get_row_with_id("tb_psy", $dog_id)){return "";}
@@ -281,7 +288,7 @@ function fn_show_my_dogs_for_this_show($show_id)
 	ON `P`.`id` = `U`.`dog_id`
 	INNER JOIN `tb_list_klasy` AS `K`
 	ON `U`.`klasa_id` = `K`.`id`
-	WHERE `U`.`show_id` = '$show_id' ORDER BY `nazwa_przydomek` DESC";
+	WHERE `U`.`show_id` = '$show_id' AND `P`.`owner_id` = '".$arr_user['id']."' ORDER BY `nazwa_przydomek` DESC";
     
     
     
@@ -291,6 +298,7 @@ function fn_show_my_dogs_for_this_show($show_id)
         	if($row->is_payed == 1){$pay_text = "OPŁĄCONE"; $pay_color = "green";}else{$pay_text = "NIEOPŁĄCONE"; $pay_color = "red";}
             $table .= "<tr><td>$row->nazwa_przydomek</td><td>$row->hodowca</td><td>$row->birthday</td><td>$row->klasa</td><td>$row->in_datetime</td><td bgcolor='$pay_color'>$pay_text</td></tr>";
         }
+        $table .= "<tr><td colspan='6'><p><a href=\"export_to_pdf.php?type=katalog\" target=\"_blank\">Katalog uczestników</a></p></td></tr>";
     }else { fn_err_write("mysql_error: " . $mysqli->error . "($sql)", __LINE__, __FILE__); }
     
     $table .= "</table>";

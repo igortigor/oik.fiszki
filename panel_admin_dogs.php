@@ -58,7 +58,7 @@ if(isset($_GET['dog_id']) AND is_numeric($_GET['dog_id']))
                 </tr>
 
                 <tr>
-                    <?=fn_select_tytuly_selected($arr_dog_details['tytuly'])?>
+                    <?=fn_select_tytuly_lista($arr_dog_details['tytuly'])?>
                     <td></td>
                 </tr>
 

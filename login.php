@@ -51,7 +51,7 @@ if(isset($_SESSION["email"])){$username = $_SESSION["email"];}
             <div id="NewAcntErrMsg" class="h3 text-center hidden">Invalid email!</div>
             <div class="form-group">
                 <select class="form-control" id="reg_user_type" name="reg_user_type">
-                    <option value="1">Uczęstnik</option>
+                    <option value="1">Uczestnik</option>
                     <option value="2">Organizator</option>
                 </select>
             </div>

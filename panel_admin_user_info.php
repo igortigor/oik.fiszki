@@ -36,7 +36,7 @@ if(isset($_POST['user_id']))
                     <form action=\"?action=showUserInfo\" method=\"POST\">
                         <input type=hidden name=user_id value=$row->id>
                         <select name='select_new_role'>
-                         <option value=\"1\">Uczęstnik</option>
+                         <option value=\"1\">Uczestnik</option>
                          <option value=\"2\">Organizator</option>
                          <option value=\"3\">Administrator</option>
                         </select>

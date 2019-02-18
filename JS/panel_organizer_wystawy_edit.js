@@ -25,9 +25,18 @@ function activate_inputssss(el)
 
 function activate_edit_form()
 {
-	var arrIdToEdit = ["showName", "orgInfo", "remarks", "adres"];
-	
-	arrIdToEdit.forEach(readonly_clear);
+	//var arrIdToEdit = ["showName"];
+	//arrIdToEdit.forEach(readonly_clear);
+
+	//document.getElementById("showName").readOnly = false;
+	//document.getElementById("showName").style.borderColor = "red";
+
+	var arrIdToEdit = ["schangeClassToDate", "cancelToDate", "enterToDate", "showDate"];
+	arrIdToEdit.forEach(disabled_clear);
+
+	var arrIdToEdit = ["orgInfo", "remarks", "adresWystawy","showName"];
+	arrIdToEdit.forEach(readonly_clear_for_textarea);
+
 	document.getElementById("submitBtnDiv").hidden = false;
 	document.getElementById("flagaFormActive").value = "1";
 	
@@ -43,14 +52,28 @@ function activate_edit_form()
 	
 	
 	document.getElementById("afterSaveBlock").hidden = true;
+
+	//document.getElementById("adresWystawy").disabled = false;
+	//document.getElementById("adresWystawy").style.borderColor = "red";
+
+}
+
+function readonly_clear_for_textarea(item, index)
+{
+	document.getElementById(item).readOnly = false;
+	document.getElementById(item).style.borderColor = "red";
+}
+
+function disabled_clear(item, index)
+{
+	document.getElementById(item).disabled = false;
+	document.getElementById(item).style.bgColor = "red";
 }
 
 function readonly_clear(item, index)
 {
   document.getElementById(item).readOnly = false;
   document.getElementById(item).style.bgColor = "red";
-
-
 }
 
 function submitShowForm()

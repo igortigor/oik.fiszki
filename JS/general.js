@@ -72,7 +72,8 @@ function toggle_hidden(id)
 function showErrMsgs()
 {
 	var ul = document.createElement('ul');
-	
+    ul.className = 'errListUl';
+
 	var textnode;
 	var node;
 	

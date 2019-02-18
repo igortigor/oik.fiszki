@@ -31,7 +31,7 @@ if($_SESSION["role"] == 3) {
     $main_php_file = "panel_admin.php";
 
     $arr_menu['accounts'] = array("act_class" => "", "post_name" => "accounts", "menu_name" => "Konta");
-    $arr_menu['admins'] = array("act_class" => "", "post_name" => "admins", "menu_name" => "Administratory");
+    $arr_menu['admins'] = array("act_class" => "", "post_name" => "admins", "menu_name" => "Administratorze");
     $arr_menu['waiting'] = array("act_class" => "", "post_name" => "waiting", "menu_name" => "Oczekujące organizatory ".fn_waiting_orgs_cnt_span());
     //$arr_menu['katalog'] = array("act_class" => "", "post_name" => "katalog", "menu_name" => "Katalog");
     $arr_menu['katalog'] = array("act_class" => "", "post_name" => "katalog", "sub_menu_name" => "Katalog :", "sub_menu_arr" => array("Rasy" => "action=katalog&sel=rasy", "Umaszczenia" => "action=katalog&sel=colors", "Miasta" => "action=katalog&sel=cities", "Sety" => "action=katalog&sel=sety"));
@@ -44,7 +44,7 @@ if($_SESSION["role"] == 3) {
     $arr_menu['wystawy'] = array("act_class" => "", "post_name" => "wystawy", "menu_name" => "Wystawy");
 
 }else{//role=1 - user
-	$role_name = "uczęstnik";
+	$role_name = "uczestnik";
     $main_php_file = "panel_user.php";
 
     //$arr_menu['dogs'] = array("act_class" => "", "post_name" => "dogs", "menu_name" => "Psy");
@@ -197,7 +197,7 @@ function fn_waiting_orgs_cnt_span()
         $cnt = $result->fetch_object()->cnt;
         if($cnt > 0){
         	
-        		if( $_GET['action'] == "waiting" AND isset($_POST['user_id'])){$cnt--;}
+        		if(isset($_GET['action']) AND $_GET['action'] == "waiting" AND isset($_POST['user_id'])){$cnt--;}
 
             return "<span class=\"w3-badge w3-red\">$cnt</span>";
         }
@@ -325,6 +325,37 @@ function isValidDate($date, $format= 'Y-m-d'){
     return $date == date($format, strtotime($date));
 }
 
+function fn_select_tytuly_lista($json_tytuly)
+{
+    global $mysqli;
+    $res = "";
+
+    if(!$arr_dog_tytuls = json_decode($json_tytuly)){$arr_dog_tytuls[]="";}
+    $arr_dog_tytuls   = array_flip($arr_dog_tytuls);
+
+    $sql = "SELECT * FROM `tb_list_tytuly` WHERE `grupa_id` = 1 ORDER BY `grupa_id`";
+    if(!$result = $mysqli->query($sql)) { return $res;}
+
+    $res .= "<td align='center' valign='top'><b>Tytuły:</b>";
+
+    while ($row = $result->fetch_object()) {
+    if(isset($arr_dog_tytuls[$row->id])){$res .= "<BR>".$row->tytulname; }
+}
+
+    $sql = "SELECT * FROM `tb_list_tytuly` WHERE `grupa_id` = 2 ORDER BY `grupa_id`";
+    if(!$result = $mysqli->query($sql)) { return $res;}
+
+    $res .= "</td><td align='center' valign='top'><b>Wyszkolenie:</b>";
+
+    while ($row = $result->fetch_object()) {
+        if(isset($arr_dog_tytuls[$row->id])){$res .= "<BR>".$row->tytulname; }
+    }
+
+    $res .= "</td>";
+
+    return $res;
+}
+
 function fn_select_tytuly_selected($json_tytuly)
 {
     global $mysqli;
@@ -336,26 +367,27 @@ function fn_select_tytuly_selected($json_tytuly)
     $sql = "SELECT * FROM `tb_list_tytuly` WHERE `grupa_id` = 1 ORDER BY `grupa_id`";
     if(!$result = $mysqli->query($sql)) { return $res;}
 
-    $res .= "<td align='center' valign='top'>Tytuły:";
+    $res .= "<optgroup label=\"Tytuły\">";
 
     while ($row = $result->fetch_object()) {
-        if(isset($arr_dog_tytuls[$row->id])){$res .= "<BR>".$row->tytulname; }
+        if(isset($arr_dog_tytuls[$row->id])){$selected = "selected";}else{$selected = "";}
+        $res .= "<option value=\"$row->id\" $selected>$row->tytulname</option>";
     }
+    $res .= "</optgroup>";
 
     $sql = "SELECT * FROM `tb_list_tytuly` WHERE `grupa_id` = 2 ORDER BY `grupa_id`";
     if(!$result = $mysqli->query($sql)) { return $res;}
 
-    $res .= "</td><td align='center' valign='top'>Wyszkolenie:";
+    $res .= "<optgroup label=\"Wyszkolenie\">";
 
     while ($row = $result->fetch_object()) {
-        if(isset($arr_dog_tytuls[$row->id])){$res .= "<BR>".$row->tytulname; }
+        if(isset($arr_dog_tytuls[$row->id])){$selected = "selected";}else{$selected = "";}
+        $res .= "<option value=\"$row->id\" $selected>$row->tytulname</option>";
     }
-
-    $res .= "</td>";
+    $res .= "</optgroup>";
 
     return $res;
 }
-
 /*
 function fn_get_wystawy_details($show_id, $org_id)
 {

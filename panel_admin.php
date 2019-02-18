@@ -149,7 +149,7 @@ function fn_get_role_from_id($role_id)
 {
 	if($role_id== 3){return "Admin";}
 	if($role_id== 2){return "Organizator";}
-	if($role_id== 1){return "Uczęstnik";}
+	if($role_id== 1){return "Uczestnik";}
 	return "-";
 }
 

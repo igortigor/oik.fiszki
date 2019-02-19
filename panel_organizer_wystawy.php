@@ -115,10 +115,13 @@ if(!$arr_show_details = fn_get_row_with_id("tb_wystawy", $_POST['show_id'])){
 if($arr_show_details['is_public'] == 1){$ispub_bgcolor = "green"; $ispub_text = "TAK";}else{$ispub_bgcolor = "red"; $ispub_text = "NIE";}
 if($arr_show_details['arc_datetime'] == "0000-00-00 00:00:00"){$arch_form_name = "toArchForm"; $arch_icon_name = "archive_white.png"; $arch_title = "Przeniesienie do archiwum";}else{$arch_form_name = "fromArchForm"; $arch_icon_name = "from_archive_white.png";$arch_title = "Przeniesienie Z archiwum";}
 
+$_SESSION["show_id"] = $_POST['show_id'];
+
 //id 	name 	city_id 	show_date 	enter_to_date 	cancel_to_date 	change_class_to_date 	org_id 	ogr_info 	remarks 	rank_id 	adres 	add_datetime 	arc_datetime 	is_public
 //-----------------<EDYCJA WYSTAWY FORM----------------------------------------
 ?>
 <link rel="stylesheet" type="text/css" href="libs/tigra_calendar/tcal.css"/>
+<link rel="stylesheet" type="text/css" href="CSS/w3.css"/>
     <script type="text/javascript" src="libs/tigra_calendar/tcal.js"></script>
     <script type="text/javascript" src="JS/panel_organizer_wystawy_edit.js"></script>
     <script type="text/javascript" src="JS/window_list.js"></script>
@@ -211,15 +214,24 @@ if($arr_show_details['arc_datetime'] == "0000-00-00 00:00:00"){$arch_form_name =
 	    	<div style="display:inline-block;">
 		    	<form action="?action=wystawy" method="POST" id="editShowForm">
 				<input type="hidden" name="price_show_id" value="<?=$_POST['show_id']?>">
-				<input id="priceEditBtn" class="button" type="submit" value="EDYTUJ CENY" />
+				<input id="priceEditBtn" class="w3-button w3-green w3-medium w3-round w3-hover-red" type="submit" value="EDYTUJ CENY" />
 				</form>
 			</div>
 			<div style="display:inline-block;">	
 				<form action="?action=wystawy" method="POST">
 				<input type="hidden" name="users_show_id" value="<?=$_POST['show_id']?>">
-				<input id="membersBtn" class="button" type="submit" value="UCZESTNIKI (<?=fn_show_users_cnt($_POST['show_id'])?>)" />
+				<input id="membersBtn" class="w3-button w3-green w3-medium w3-round w3-hover-red" type="submit" value="UCZESTNIKI (<?=fn_show_users_cnt($_POST['show_id'])?>)" />
 				</form>
 			</div>
+            <div style="display:inline-block;">
+                <a href="export_to_pdf.php?type=wystawcy" target="_blank" class="w3-button w3-green w3-medium w3-round w3-hover-red">Wystawcy (pdf)</a>
+            </div>
+            <div style="display:inline-block;">
+                <a href="export_to_pdf.php?type=karty" target="_blank" class="w3-button w3-green w3-medium w3-round w3-hover-red">Karty ocen (pdf)</a>
+            </div>
+            <div style="display:inline-block;">
+                <a href="export_to_pdf.php?type=katalog" target="_blank" class="w3-button w3-green w3-medium w3-round w3-hover-red">Katalog (pdf)</a>
+            </div>
 		</div>
 	</td>
 </tr>

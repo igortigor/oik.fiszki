@@ -6,7 +6,7 @@ print_r($_POST);
 echo ("</pre>");
 */
 define("MAIN_FILE", TRUE);
-define("SHOW_FILENAME", TRUE);
+//define("SHOW_FILENAME", TRUE);
 
 if(!isset($_SESSION["role"])){
     include("login.php");

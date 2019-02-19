@@ -294,11 +294,13 @@ function fn_show_my_dogs_for_this_show($show_id)
     
     if($result = $mysqli->query($sql)) {
     	if($result->num_rows == 0){return "<div>Nie mam zgłoszonych do tej wystawy psów.</div>";}
+        $_SESSION["show_id"] = $show_id;
         while ($row = $result->fetch_object()) {
         	if($row->is_payed == 1){$pay_text = "OPŁĄCONE"; $pay_color = "green";}else{$pay_text = "NIEOPŁĄCONE"; $pay_color = "red";}
             $table .= "<tr><td>$row->nazwa_przydomek</td><td>$row->hodowca</td><td>$row->birthday</td><td>$row->klasa</td><td>$row->in_datetime</td><td bgcolor='$pay_color'>$pay_text</td></tr>";
         }
-        $table .= "<tr><td colspan='6'><p><a href=\"export_to_pdf.php?type=katalog\" target=\"_blank\">Katalog uczestników</a></p></td></tr>";
+        //$table .= "<tr><td colspan='6'><p><a href=\"export_to_pdf.php?type=katalog\" target=\"_blank\">Katalog uczestników</a></p></td></tr>";
+$table .= "<tr><td colspan='6'><p><a href=\"export_to_pdf.php?type=katalog&show_id=\" target=\"_blank\" class=\"w3-button w3-green w3-medium w3-round w3-hover-red\">Katalog uczestników (pdf)</a></p></td></tr>";
     }else { fn_err_write("mysql_error: " . $mysqli->error . "($sql)", __LINE__, __FILE__); }
     
     $table .= "</table>";

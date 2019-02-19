@@ -1,6 +1,6 @@
 <?php
 if(!defined("MAIN_FILE")) die;
-if(isset($_POST['username'])){$username = $_POST['username'];}else{$username = "test@mail.ru";}
+if(isset($_POST['username'])){$username = $_POST['username'];}else{$username = "";}
 if(isset($_SESSION["email"])){$username = $_SESSION["email"];}
 ?>
 <!DOCTYPE html>

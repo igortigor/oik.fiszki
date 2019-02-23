@@ -1,0 +1,94 @@
+Cały kod wraz z bazą danych można pobrać pod adresem: 
+https://github.com/igortigor/oik.fiszki.git
+
+logowanie:
+
+po stworzeniu nowego konta system wysyła email z linkiem potwierdzenia
+dla domeny "@poczta.pl" email nie wysyła się. Linki dla aktywacji w tym przypadku można pobrać w log plikach pod adresem:
+https://oik.fiszki.net/logs/mail.txt
+
+gotowe konta dla testowania:
+
+Uczestnik
+user_rand_40@poczta.pl
+123
+
+Organizator
+org@poczta.pl
+123
+
+Administrator
+admin@poczta.pl
+123
+
+Krótki schemat-instrukcja do aplikacji:
+
+----------------------Uczestnik---------------------
+
+
+Dane:
+doubleclick Edit dla edycji danych
+doubleclick Hasło dla nadania nowego hasła
+
+Psy: Moje psy:
+doubleclick stroki psa -> Dane psa (Edycja niemożliwa jeżeli pies jest potwierdzony administratorem)
+
+Psy: Nowy pies -> formularz dodania nowego psa.
+
+Wystawy:
+Lista wystaw. -> po podwójnym klikaniu na wystawie -> dane wystawy z przyciskiem dodania psa do wystawy i ieżeli są psy zgłoszone wyświetli ich i przycisk katalogu uczestników.
+
+
+--------------------Administrator--------------------
+
+Dane - takie same jak u uczestnika
+
+Konta:
+lista wszystkich kont oprucz administratorów
+	-> przy podwójnym kliknięciu-> tebelka z danymi konta:
+		->podwójne klikanie na Roli-> zmiana roli (można nadać także rolę administratora)
+		->podwójne klikanie Zablokować/Odblokować na nazwie pola blokuje/odblokuje konto.
+		->podwójne klikanie Zmiana hasła -> nadanie nowego hasła
+	
+Administratorze:
+lista kont administratorów do wglądu.
+
+Oczekujące organizatory:
+lista nowych kont organizatorów czekających na potwierdzenie
+->podwójne kliknięcie konta-> potwierdzenie konta
+
+
+Katalog:
+	->Rasy - lista ras, edycja, dodanie nowej rasy.
+	->Umaszczenia - lista umaszczeń, edycja, dodanie nowego.
+	(dla edycje wybrać jeden wiersz pojedynczym kliknięciem i nacisnąć przycisk edycje na dole po lewej stronie)
+	->Miasta - lista miast biez możliwości edycji i dodania nowego.
+	->Sety - gotowe kombinacji Rasa-Umaszczenie
+		->przycisk "pokaż" wyświetla wszystkie umaszczenia dla wybranej rasy
+		(dla wybru rasy należy kliknąć na wiersz z rasą poniżej w gotowych setach albo wybrać z listy dla stworzenia nowego seta.
+		
+Psy:
+lista wszystkich psów
+	->podwójne kliknięcie->formularz danych psa (bez edycji) z możliwością zaznaczenia potwierdzone/niepotwierdzone klikająć dwukrotnie na otpowiednim polu.
+	
+
+--------------------Organizator-----------------------
+	
+Dane - takie same jak u uczestnika
+
+Wystawy:
+lista wystaw
+->podwójne kliknięcie wiersza z wystawą->formularz wystawy:
+	->podwójne kliknięciezagłówka->włączenie trybu edycji.
+	->klikanie ikonki pudełka w zagłówku->przenie sienie do archiwum
+	->podwójne klikanie czerwonego przycisku z krzyżykiem->usunięcie wystawy (po potwierdzeniu przyciskiem "TAK")
+	->podwójne kliknięcie na polu TAK/NIE (opublikowana) można publikować wystawę i na odwrót (po potwierdzeniu przyciskiem "SAVE")
+	->na dole lista przycisków:
+		->edytuj ceny->dodanie/edycja/usunięcie cen różnych klas
+		->uczestniki (liczbauczestników) -> lista uczestników
+			->podwójne kliknięcie->dane uczestnika
+				->podwójne kliknięcie po polu opłata->zaznaczenie opłacono/nieopłacono
+				->podwójne kliknięcie po polu Komentarz->dodanie komentarza do opłaty
+		->Wystawcy (pdf) -> generacja pdf z wystawcami
+		->Karty ocen (pdf) -> generacja pdf z kartami ocen
+		->Katalog (pdf) -> generacja pdf z listą psów (uczestników)

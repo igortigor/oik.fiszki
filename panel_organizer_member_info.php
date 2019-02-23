@@ -97,7 +97,7 @@ if($arr_dog_details['rodowod_preparing']){$rodowód = "W przygotowaniu";}else{$r
     <td><?=fn_get_name_from_list("tb_list_kolory", $arr_dog_details['color_id'])?></td>
 </tr>
 <tr>
-	<?=fn_select_tytuly_selected($arr_dog_details['tytuly'])?>
+	<?=fn_select_tytuly_lista($arr_dog_details['tytuly'])?>
 </tr>
 <tr>
     <td align="right">Tata:</td>
@@ -128,7 +128,7 @@ if(!$arr_user_details = fn_get_user_details()){fn_show_report("Nieznany właści
 	<th colspan="2">Dane właściciela</th>
 </tr></thead>
 <tr>
-    <td align="right" width="50%">Imie:</td>
+    <td align="right" width="50%">Imię:</td>
     <td><?=$arr_user_details['name']?></td>
 </tr>
 <tr>

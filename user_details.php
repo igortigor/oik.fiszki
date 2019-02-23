@@ -1,7 +1,7 @@
 <?php
 if(!defined("MAIN_FILE")) die;
 
-fn_show_report("user_details.php ".$_SESSION["email"]);
+if(defined("SHOW_FILENAME")) fn_show_report(basename(__FILE__)." ".$_SESSION["email"]);
 
 if(isset($_POST['update_user_info']) AND isset($_POST['user_id']) AND is_numeric($_POST['user_id']))
 {
@@ -38,7 +38,7 @@ if($result = $mysqli->query($sql))
         echo ("<div style=\"overflow-x:auto;\">
         <table class=\"accountInfo\">
         <form action=\"?action=home\" method=\"POST\">
-        <tr><th style=\"width: 30%;\">Imie:</th><td style=\"width: 70%;\">
+        <tr><th style=\"width: 30%;\">Imię:</th><td style=\"width: 70%;\">
             <input id='infoName' type='text' name='name' value='$row->name' readonly size='50'>
         </td></tr>
         <tr><th>Nazwisko:</th><td>

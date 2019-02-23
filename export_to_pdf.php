@@ -86,7 +86,7 @@ if($_GET['type'] == "katalog"){
 					
 					$name = iconv('UTF-8', 'iso-8859-2//TRANSLIT//IGNORE', $dog_arr['name']);
 					$color = iconv('UTF-8', 'iso-8859-2//TRANSLIT//IGNORE', $dog_arr['color']);
-					$msg = $dog_arr['NR']." ".$name." ".$color." ".$dog_arr['birthday'];
+					$msg = $dog_arr['NR'].". ".$name." ".$color." ".$dog_arr['birthday'];
 					
 					$pdf->SetFont('DejaVu','',12);
 					$pdf->Cell(0,10,$msg,0,1);

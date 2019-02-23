@@ -22,7 +22,7 @@ if(isset($_POST['user_id']))
         {
             echo ("<div style=\"overflow-x:auto;\">
   			<table class=\"accountInfo\">
-    		<tr><th style=\"width: 30%;\">Imie:</th><td style=\"width: 70%;\">$row->name</td></tr>
+    		<tr><th style=\"width: 30%;\">Imię:</th><td style=\"width: 70%;\">$row->name</td></tr>
     		<tr><th>Nazwisko:</th><td>$row->surname</td></tr>
     		<tr><th>Email:</th><td>$row->email</td></tr>
     		<tr><th>Telefon:</th><td>$row->phone</td></tr>

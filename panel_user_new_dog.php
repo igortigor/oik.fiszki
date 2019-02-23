@@ -5,7 +5,7 @@ if(defined("SHOW_FILENAME")) fn_show_report(basename(__FILE__));
 if(!$arr_user_details = fn_get_user_details() OR empty($arr_user_details['name']) OR empty($arr_user_details['surname'])){
 ?>
 <div align="center" style='max-width: 800px; margin: 20px; color: red;'>
-    Proszę najpierw wprowadzić Imie i Nazwisko do systemu w zakładce "Dane".
+    Proszę najpierw wprowadzić Imię i Nazwisko do systemu w zakładce "Dane".
 </div>
 
 <?php

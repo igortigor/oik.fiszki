@@ -37,7 +37,7 @@ if($_GET['action'] == "accounts")
 
 	echo ("<div style=\"overflow-x:auto;\">
   			<table class=\"standartTable\">
-    		<tr><th>Imie</th><th>Nazwisko</th><th>Email</th><th>Telefon</th><th>Rejestracja</th><th>Rola</th></tr>");
+    		<tr><th>Imię</th><th>Nazwisko</th><th>Email</th><th>Telefon</th><th>Rejestracja</th><th>Rola</th></tr>");
 	
 	$sql = "SELECT * FROM `tb_users` WHERE `role` != 3 ORDER BY `id` DESC";
 	if($result = $mysqli->query($sql)){
@@ -69,7 +69,7 @@ if($_GET['action'] == "admins")
 
 	echo ("<div style=\"overflow-x:auto;\">
   			<table class=\"standartTable\">
-    		<tr><th>Imie</th><th>Nazwisko</th><th>Email</th><th>Telefon</th><th>Rejestracja</th><th>Rola</th></tr>");
+    		<tr><th>Imię</th><th>Nazwisko</th><th>Email</th><th>Telefon</th><th>Rejestracja</th><th>Rola</th></tr>");
 	
 	$sql = "SELECT * FROM `tb_users` WHERE `role` = 3 ORDER BY `id` DESC";
 	if($result = $mysqli->query($sql)){
@@ -104,7 +104,7 @@ if($_GET['action'] == "waiting")
 	
 	echo ("<div style=\"overflow-x:auto;\">
   			<table id=\"adminTable\" class=\"standartTable\">
-    		<tr><th>Imie</th><th>Nazwisko</th><th>Email</th><th>Telefon</th><th>Rejestracja</th><th>Rola</th><th></th></tr>");
+    		<tr><th>Imię</th><th>Nazwisko</th><th>Email</th><th>Telefon</th><th>Rejestracja</th><th>Rola</th><th></th></tr>");
 	
 	$sql = "SELECT * FROM `tb_users` WHERE `role` = 2 AND `org_comfirmed` = 0 ORDER BY `id` DESC";
 	if($result = $mysqli->query($sql)){

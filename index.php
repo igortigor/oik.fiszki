@@ -31,8 +31,8 @@ if($_SESSION["role"] == 3) {
     $main_php_file = "panel_admin.php";
 
     $arr_menu['accounts'] = array("act_class" => "", "post_name" => "accounts", "menu_name" => "Konta");
-    $arr_menu['admins'] = array("act_class" => "", "post_name" => "admins", "menu_name" => "Administratorze");
-    $arr_menu['waiting'] = array("act_class" => "", "post_name" => "waiting", "menu_name" => "Oczekujące organizatory ".fn_waiting_orgs_cnt_span());
+    $arr_menu['admins'] = array("act_class" => "", "post_name" => "admins", "menu_name" => "Administratorzy");
+    $arr_menu['waiting'] = array("act_class" => "", "post_name" => "waiting", "menu_name" => "Oczekujący organizatorzy ".fn_waiting_orgs_cnt_span());
     //$arr_menu['katalog'] = array("act_class" => "", "post_name" => "katalog", "menu_name" => "Katalog");
     $arr_menu['katalog'] = array("act_class" => "", "post_name" => "katalog", "sub_menu_name" => "Katalog :", "sub_menu_arr" => array("Rasy" => "action=katalog&sel=rasy", "Umaszczenia" => "action=katalog&sel=colors", "Miasta" => "action=katalog&sel=cities", "Sety" => "action=katalog&sel=sety"));
     $arr_menu['dogs'] = array("act_class" => "", "post_name" => "dogs", "menu_name" => "Psy");

@@ -35,7 +35,7 @@ if (isset($_POST['commit_dog_id']) AND is_numeric($_POST['commit_dog_id']) AND i
 
 ?>
 
-    
+<link rel="stylesheet" type="text/css" href="CSS/w3.css"/>
 <form action="?action=wystawy" method="POST" id="editShowForm">
 <input type="hidden" name="flagaFormActive" id="flagaFormActive" value="0">
 <input type="hidden" name="update_show_id" value="<?=$_POST['show_id']?>">

@@ -39,7 +39,7 @@ if(defined("SHOW_FILENAME")) fn_show_report(basename(__FILE__));
     
     
     
-    <a href="#waiting"><i class="icon-time"></i>Oczekujące organizatory <span class="badge badge-info" title="Nie ma">0</span></a>
+    <a href="#waiting"><i class="icon-time"></i>Oczekujący organizatorzy <span class="badge badge-info" title="Nie ma">0</span></a>
 
 
     <div class="login-container">
